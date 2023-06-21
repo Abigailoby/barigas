@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
-<link rel = "icon" href ="../image/FK4.png" type = "image/x-icon">
+<link rel = "icon" href ="../image/icon.png" type = "image/x-icon">
 <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
 <title>Menu</title>
 <?php
@@ -36,16 +36,16 @@
     }
 </style>
 
-<div class="container-fluid" style="margin-top:98px">
+<div class="container-fluid" style="margin-top:98px">	
 	
 	<div class="col-lg-12">
 		<div class="row">
 			<!-- FORM Panel -->
 			<div class="col-12" data-aos="zoom-in-right" data-aos-duration="1000">
-				<form action="partials/_menuManage.php" method="post" enctype="multipart/form-data">
+				<form action="partials/_barangManage.php" method="post" enctype="multipart/form-data">
 				<div class="card mb-3" style="border:1px solid #5572fe">
 					<div class="card-header pala">
-						Tambah Menu Baru
+						Tambah Barang Baru
 				  	</div>
 					<div class="card-body">
 							<div class="form-group">

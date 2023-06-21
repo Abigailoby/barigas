@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Kita</title>
-  <link rel = "icon" href ="image/FK4.png" type = "image/x-icon">
+    <title>Barigas</title>
+  <link rel = "icon" href ="image/icon.png" type = "image/x-icon">
     <!-- bs cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -60,7 +60,7 @@
             <div class="gmail card">
               <div class="card-body py-5 gmail">
                   <h5 class="head1 py-3"> <i class="bi bi-envelope"> </i>Gmail</h5>
-                  <p>FoodKita523@gmail.com</p>
+                  <p>Barigas523@gmail.com</p>
               </div>
             </div>
           </div>

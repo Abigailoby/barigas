@@ -1,14 +1,14 @@
 <body id="body-pd">
     <header class="header" id="header">
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-        <div class="header_img"> <img src="../image/profilePic.jpg" alt="poto"> </div>
+        <div class="header_img"> <img src="../image/urang-1.jpg" alt="poto"> </div>
     </header>
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
             <div>
                <a href="index.php" class="nav_logo"> 
-               <i class='nav_logo-icon'><img src="../image/FK4.png" alt="" style="width:30px"></i>
-              <span class="nav_logo-name">FoodKita</span>
+               <i class='nav_logo-icon'><img src="../image/icon.png" alt="" style="width:25px"></i>
+              <span class="nav_logo-name">Barigas</span>
              </a>
 
                 <div class="nav_list">
@@ -29,7 +29,7 @@
 
                    <a href="barangManage.php" class="nav_link nav-menuManage"> 
                     <i class='bx bx-message-square-detail nav_icon'></i> 
-                    <span class="nav_name">Menu</span> 
+                    <span class="nav_name">Barang</span> 
                   </a>
 
                   <a href="userManage.php" class="nav_link nav-userManage"> 

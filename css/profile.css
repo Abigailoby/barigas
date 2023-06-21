@@ -34,7 +34,7 @@
 }
 
 .btncart{
-    background-color: #fac031;
+    background-color: #ff3900ff;
     border: 2px solid #5572fe;
 }
 
@@ -98,7 +98,7 @@
 .btnL{
     height: 40px;
     outline: none;
-    border:3px solid #fac031;
+    border:3px solid #ff3900ff;
     background: #5572fe;
     color: white;
     border-radius: 30px;

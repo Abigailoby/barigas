@@ -11,7 +11,7 @@ body{
 }
 
 .main{
-    background: url(../image/tes3.jpg);
+    background: url(../image/background.jpg);
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -20,19 +20,19 @@ body{
 
 
 .kata h4{
-    color: #5572fe;
+    color: #ff3900ff;
     font-size: 200%;
     font-weight: 700;
     margin-top: 50px;
 }
 
 .kata h1{
-    color: #fac031;
+    color: #fda12dff;
     font-size: 340%;
 }
 
 .kata p{
-    color: white;
+    color: #ffffff;
 }
 
 
@@ -67,7 +67,7 @@ body{
 .line2{
     height: 6px;
     width: 50%;
-    background-color: #fac031;
+    background-color: #fda12dff;
     display: inline-block;
 }
 
@@ -83,7 +83,7 @@ body{
 }
 
 .welcome .card:hover{
-    background-color: #fac031;
+    background-color: #fda12dff;
     color: white;
 }
 
@@ -130,7 +130,7 @@ body{
 
 .star{
     text-align: end;
-    color: orange;
+    color: #fda12dff;
 }
 
 .product .card{
@@ -209,13 +209,13 @@ body{
     outline: none;
     border: none;
     color: white;
-    background: #fac031;
+    background: #fda12dff;
     border-radius: 50px;
     transition: all 0.4s;
 }
 
 .mbtn1:hover{
-    background-color: #dfa106;
+    background-color: #fda12dff;
 }
 /* about end */
 
@@ -271,7 +271,7 @@ body{
     margin: auto;
     border-radius: 50%;
     overflow: hidden;
-    border: 5px solid #fac031;
+    border: 5px solid #fda12dff;
     margin-bottom: 20px;
 }
 
@@ -320,7 +320,7 @@ border-radius: 50%;
     justify-content: center;
     position: relative;
     transition: 0.3s;
-    border: 4px solid #fac031;
+    border: 4px solid #fda12dff;
 }
 
 .line3{
@@ -366,7 +366,7 @@ border-radius: 50%;
 }
 
 .tim .card-body .sosial i:hover{
-    color: #fac031;
+    color: #fda12dff;
 }
 
 .tim .card-body:hover .sosial i{

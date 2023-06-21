@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
   
-    <title>Food Kita</title>
-  <link rel = "icon" href ="image/FK4.png" type = "image/x-icon">
+    <title>Barigas</title>
+  <link rel = "icon" href ="image/icon.png" type = "image/x-icon">
     <link rel="stylesheet" href="css/nav.css">
     <style>
     #cont {

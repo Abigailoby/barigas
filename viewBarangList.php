@@ -15,7 +15,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title id="title">Category</title>
     <link rel="stylesheet" href="css/nav.css">
-    <link rel = "icon" href ="image/FK4.png" type = "image/x-icon">
+    <link rel = "icon" href ="image/icon.png" type = "image/x-icon">
 
     <style>
         
@@ -32,7 +32,7 @@
     <div>&nbsp;
         <a href="menu.php" class="active text-dark">
         <i class="fas fa-qrcode"></i>
-            <span>Semua Menu</span>
+            <span>Semua Kategori</span>
         </a>
     </div>
 

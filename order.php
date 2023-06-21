@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-    <title>Food Kita</title>
-  <link rel = "icon" href ="image/FK4.png" type = "image/x-icon">
+    <title>Barigas</title>
+  <link rel = "icon" href ="image/icon.png" type = "image/x-icon">
     <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 

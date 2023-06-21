@@ -35,15 +35,14 @@ main#main{
 .logo {
     margin: auto;
     font-size: 8rem;
-    background: white;
+    
     border-radius: 50% 50%;
     height: 35%;
     width: 30%;
     display: flex;
-    align-items: center;
-    border: 2px solid #fac031;
+   
 }
 .logo img{
-    width: 80%;
+    width: auto;
     margin: auto
 }

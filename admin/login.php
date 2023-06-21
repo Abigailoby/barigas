@@ -9,14 +9,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
    <title>Login</title>
-    <link rel = "icon" href ="../image/FK4.png" type = "image/x-icon">
+    <link rel = "icon" href ="../image/icon.png" type = "image/x-icon">
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
     <main id="main" class=" bg-dark animate__animated animate__fadeIn">
         <div id="login-left">
         <div class="logo">
-            <img src="../image/FoodKita.png" alt="">
+            <img src="../image/Logo.png"alt="logo">
         </div>
         </div>
         <div id="login-right">

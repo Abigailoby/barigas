@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/nav.css">
     <title>Barigas</title>
-    <link rel = "icon" href ="image/FK4.png" type = "image/x-icon">
+    <link rel = "icon" href ="image/icon.png" type = "image/x-icon">
 </head>
 <body>
     <?php include 'partials/_dbconnect.php';?>

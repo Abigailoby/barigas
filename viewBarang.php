@@ -9,8 +9,8 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <title id=title>food</title>
-    <link rel = "icon" href ="image/FK4.png" type = "image/x-icon">
+    <title id=title>Barigas</title>
+    <link rel = "icon" href ="image/icon.png" type = "image/x-icon">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -65,13 +65,13 @@
                 <div class="mx-4">
                     <a href="viewBarangList.php?katid=' . $barangKategoriId . '" class="active text-dark">
                     <i class="fas fa-qrcode"></i>
-                        <span>Semua Makanan</span>
+                        <span>Semua barang</span>
                     </a>
                 </div>
                 <div class="mx-4">
                     <a href="menu.php" class="active text-dark">
                     <i class="fas fa-qrcode"></i>
-                        <span>Semua Menu</span>
+                        <span>Semua kategori</span>
                     </a>
                 </div>
             </div>

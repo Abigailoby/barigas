@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Barigas</title>
-  <link rel = "icon" href ="image/FK4.png" type = "image/x-icon">
+  <link rel = "icon" href ="image/icon.png" type = "image/x-icon">
 
   <!-- bs cdn -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -51,11 +51,12 @@
       <div class="row py-0">
         <div class="col-lx-7 pt-0 text-center">
           <div class="kata py-5 my-5 animate__animated animate__slideInLeft">
-            <h4>Best <span>Food</span> In UII</h4>
-            <h1>
-              ORDER HEALTHY AND FRESH FOOD ANY TIME
+            <h4>Jadilah  <span>Aktif,</span> Siap Beraksi!</h4>
+            <h1 class='kata'>
+            
+             Tempat Tepat untuk Perlengkapan Olahraga Anda
             </h1>
-            <p>menjual berbagai macam makanan yang pastinya memiliki harga yang murah dan halal serta enak</p>
+            <p>Menjual berbagai macam Perlengkapan olahraga dengan harga murah dan lengkap</p>
 
           </div>
         </div>
@@ -71,9 +72,9 @@
     <div class="container py-5">
       <div class="row py-5 text-white">
         <div class="col-lg-6 m-auto ">
-          <h1> Welcome To Food Kita</h1>
+          <h1> Welcome To Barigas</h1>
           <div class="line2 my-4"></div>
-          <p class="">Menyediakan makanan, snack, dan minuman dengan harga yang terjangkau serta berkualitas dan juga halal .</p>
+          <p class="">Menyediakan Pakaian olahraga, alat-alat olahraga, dan multi-vitamin dengan harga yang terjangkau serta berkualitas .</p>
         </div>
       </div>
       <div class="row">
@@ -82,7 +83,7 @@
             <div class="card-body py-5">
               <span><i class="bi bi-truck"></i></span>
               <h5 class="head1 py-3">Free Delivery</h5>
-              <p class="per1">Dengan 2 km atau kurang FoodKita akan menyediakan Pengiriman pesanan gratis</p>
+              <p class="per1">Dengan 2 km atau kurang Barigas akan menyediakan Pengiriman pesanan gratis</p>
             </div>
           </div>
         </div>
@@ -91,7 +92,7 @@
             <div class="card-body py-5">
               <span><i class="bi bi-moon-stars"></i></span>
               <h5 class="head1 py-3">Halal</h5>
-              <p class="per1">Menjual berbagai macam jenis makanan halal sehingga aman dikonsumsi</p>
+              <p class="per1">Menjual berbagai perlengkapan olahraga untuk mendukung kegiatanmu</p>
             </div>
           </div>
         </div>
@@ -165,11 +166,11 @@
     <div class="container">
       <div class="row py-3">
         <div class="col-lg-5 py-5 offset-lg-7 col-md-12 col-sm-12 col-12 text-center">
-          <h1>About FoodKita</h1>
+          
+          <h1>About Barigas</h1>
           <div class="line my-4 text-start"></div>
-          <p class="text-start">Food Kita adalah sebuah website yang menjual berbagai macam makanan yang diolah oleh
-            kantin
-            kita, Kantin Kita adalah nama kantin yang merupakan salah satu sarana di Fakultas Teknologi Industri.</p>
+          <p class="text-start">Barigas adalah sebuah website yang menjual berbagai macam perlengkapan olahraga
+            kita.</p>
 
           <button class="mbtn1 mt-4" onclick="location.href='about.php'">Baca Lebih Lanjut</button>
         </div>
@@ -202,10 +203,10 @@
                 <div class="carousel-item active">
                   <div class="carousel-caption ">
                     <div class="person">
-                      <img src="./image/review2.png" alt="Pelanggan">
+                      <img src="./image/urang-1.jpg" alt="Pelanggan">
                     </div>
                     <div class="content text-center">
-                      <p>"Makanannya sangat enak bingitz top!"</p>
+                      <p>"Multi-vitaminnya murah- murah!"</p>
                       <h5>Ahmad Irfan</h5>
                     </div>
                   </div>
@@ -213,10 +214,10 @@
                 <div class="carousel-item">
                   <div class="carousel-caption ">
                     <div class="person">
-                      <img src="./image/review.jpg" alt="Pelanggan">
+                      <img src="./image/urang-1.jpg" alt="Pelanggan">
                     </div>
                     <div class="content text-center">
-                      <p>"Dengan Food Kita makan jadi mudah."</p>
+                      <p>"Barangnya lengkap semua."</p>
                       <h5>Raihan Abigail</h5>
                     </div>
                   </div>
@@ -224,10 +225,10 @@
                 <div class="carousel-item">
                   <div class="carousel-caption">
                     <div class="person">
-                      <img src="./image/review3.png" alt="Pelanggan">
+                      <img src="./image/urang-1.jpg" alt="Pelanggan">
                     </div>
                     <div class="content text-center">
-                      <p>"Makanan di Food Kita harganya terjangkau :)."</p>
+                      <p>"Berigas pengirimannya cepat."</p>
                       <h5>Muhammad Akhtar</h5>
                     </div>
                   </div>
@@ -266,7 +267,7 @@
         <div class="col-lg-3 py-3 px-3">
           <div class="card p-2">
             <div class="card-body">
-              <img src="./image/kebab.jpg" class="img-fluid pb-3 ">
+              <img src="./image/urang-1.jpg" class="img-fluid pb-3 ">
               <h4 class="aranitah text-center">Irfan</h4>
               <div class="sosial text-center py-3">
                 <i class="fa-brands fa-facebook-f"></i>
@@ -281,8 +282,8 @@
         <div class="col-lg-3 py-3 px-3">
           <div class="card p-2">
             <div class="card-body">
-              <img src="./image/kebab.jpg" class="img-fluid pb-3 ">
-              <h4 class="aranitah text-center">Raihan</h4>
+              <img src="./image/urang-1.jpg" class="img-fluid pb-3 ">
+              <h4 class="aranitah text-center">Fahni</h4>
               <div class="sosial text-center py-3">
                 <i class="fa-brands fa-facebook-f"></i>
                 <i class="fa-brands fa-instagram"></i>
@@ -296,7 +297,7 @@
         <div class="col-lg-3 py-3 px-3">
           <div class="card p-2">
             <div class="card-body">
-              <img src="./image/kebab.jpg" class="img-fluid pb-3 ">
+              <img src="./image/urang-1.jpg" class="img-fluid pb-3 ">
               <h4 class="aranitah text-center">Akhtar</h4>
               <div class="sosial text-center py-3">
                 <i class="fa-brands fa-facebook-f"></i>
@@ -311,7 +312,7 @@
         <div class="col-lg-3 py-3 px-3">
           <div class="card p-2">
             <div class="card-body">
-              <img src="./image/kebab.jpg" class="img-fluid pb-3 ">
+              <img src="./image/urang-1.jpg" class="img-fluid pb-3 ">
               <h4 class="aranitah text-center">Fauzan</h4>
               <div class="sosial text-center py-3">
                 <i class="fa-brands fa-facebook-f"></i>

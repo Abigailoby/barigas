@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food Kita</title>
-  <link rel = "icon" href ="image/FK4.png" type = "image/x-icon">
+  <title>Barigas</title>
+
+  <link rel = "icon" href ="image/icon.png" type = "image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/about.css">
@@ -47,15 +48,12 @@
       <div class="row py-4">
         <!-- < class="col-lg-7 pt-5 text-center"> -->
         <div class="kantinpoto col-lg-1 mt-4">
-          <img src="./image/kantin2.jpg">
+          <img src="./image/sports.jpg">
         </div>
 
         <div class="kata col-lg-6 ms-auto mt-3 text-bg-light">
-          <h4 class="mb-3 pt-3 text-center">Food <span>Kita</span></h4>
-          <p class="pt-3">Food Kita adalah sebuah website yang menjual berbagai macam makanan yang diolah oleh kantin
-            kita, Kantin Kita adalah nama kantin yang merupakan salah satu sarana di Fakultas Teknologi Industri. Kantin
-            ini menyediakan berbagai menu makanan, jajanan dan minuman untuk mahasiswa, dosen, dan juga umum. Mulai dari
-            menu yang disediakan secara prasmanan hingga menu yang dapat dipesan langsung kepada pegawai kantin.</p>
+          <h4 class="mb-3 pt-3 text-center">Barigas </h4>
+          <p class="pt-3">Selamat datang di situs kami! Kami menyediakan platform online yang menghadirkan beragam informasi dan produk terkait olahraga untuk memenuhi kebutuhan Anda. Temukan artikel inspiratif, panduan latihan, ulasan produk, dan berbagai tips serta trik untuk meningkatkan kinerja dan kebugaran Anda. Dapatkan akses mudah untuk menjelajahi kategori-kategori produk berkualitas, mulai dari pakaian olahraga hingga alat-alat latihan terbaru. Situs kami memberikan pengalaman yang user-friendly, menyajikan informasi yang terpercaya dan relevan agar Anda dapat menjalani gaya hidup aktif dengan lebih baik. Selamat menjelajahi dan temukan potensi Anda dalam dunia olahraga bersama kami!</p>
         </div>
 
 
@@ -75,7 +73,7 @@
       <div class="col-xl-6  mt-3  p-3" data-aos="zoom-in" >
           <div class="card p-2 shadow" style="height: 35rem;">
             <div class="card-body" >
-              <img src="./image/review2.png" >
+              <img src="./image/urang-1.jpg" >
               <h6 class="head1 text-center py-2 mt-3">MUHAMMAD IRFAN ABIGAIL</h6>
               <h6 class="text-center pb-2">21523028</h6>
             </div>
@@ -89,21 +87,21 @@
         <div class="col-xl-6 mt-3 p-3" data-aos="zoom-in">
           <div class="card p-2 shadow" style="height: 35rem;">
             <div class="card-body">
-              <img src="./image/review2.png" >
-              <h6 class="head1 text-center py-2 mt-3">RAIHAN ALFAJRY</h6>
-              <h6 class="text-center pb-2">21523207</h6>
+              <img src="./image/urang-1.jpg" >
+              <h6 class="head1 text-center py-2 mt-3">Fahni Maharani</h6>
+              <h6 class="text-center pb-2">21523074</h6>
             </div>
             <ul class="list-group">
-              <li class="list-group-item">Asal : <br> <p class="card-text">Nias, Sumatera Utara</p></li>
-              <li class="list-group-item">Tanggal Lahir : <br><p class="card-text"> 1 Oktober 2003</p></li>
-              <li class="list-group-item">Pendidikan : <br><p class="card-text">SDN 1 GUNUNGSITOLI <br> SMP NURUL IKHLAS PADANG PANJANG <br> SMAN AL AZHAR MEDAN</p></li>
+              <li class="list-group-item">Asal : <br> <p class="card-text">Padang, Sumatera Barat</p></li>
+              <li class="list-group-item">Tanggal Lahir : <br><p class="card-text"> 25 September 2001</p></li>
+              <li class="list-group-item">Pendidikan : <br><p class="card-text">SDN 5 KAMPUNG PONDOK <br> SMP 8 PARIAMAN <br> SMAK TEKNOLOGI PLUS PADANG</p></li>
             </ul>
           </div>
         </div>
         <div class="col-xl-6 mt-3 p-3" data-aos="zoom-in">
           <div class="card p-2 shadow" style="height: 35rem;">
             <div class="card-body">
-              <img src="./image/review2.png" >
+              <img src="./image/urang-1.jpg" >
               <h6 class="head1 text-center py-2 mt-3">FAREESDZY AKHTARABILLAH SETIAWAN</h6>
               <h6 class="text-center pb-2">21523140</h6>
             </div>
@@ -120,7 +118,7 @@
           <div class="col-xl-6 mt-3 p-3" data-aos="zoom-in">
             <div class="card p-2 shadow" style="height: 35rem;">
               <div class="card-body" >
-                <img src="./image/review2.png" >
+                <img src="./image/urang-1.jpg" >
                 <h6 class="head1 text-center py-2 mt-3">AHMAD FAUZAN ZAKY</h6>
                 <h6 class="text-center pb-2">21523201</h6>
               </div>
