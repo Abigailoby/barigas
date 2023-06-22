@@ -124,7 +124,7 @@
                                     echo '<tr>
                                             <td class="text-center">' .$barangKategoriId. '</td>
                                             <td>
-                                                <img src="/barigas/image/makan-'.$barangId. '.jpg" alt="image for this item" width="150px" height="150px">
+                                                <img src="/barigas/image/barang-'.$barangId. '.jpg" alt="image for this item" width="150px" height="150px">
                                             </td>
                                             <td>
                                                 <p>Nama : <b>' .$barangName. '</b></p>
@@ -164,7 +164,7 @@
         $barangId = $barangRow['barangId'];
         $barangName = $barangRow['NamaBarang'];
         $barangPrice = $barangRow['hargaBarang'];
-        $barangKategoriId = $barangRow['barangKategorid'];
+        $barangKategoriId = $barangRow['barangKategoriId'];
         $barangDesc = $barangRow['barangDesc'];
 ?>
 

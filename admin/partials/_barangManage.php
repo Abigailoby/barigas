@@ -47,7 +47,7 @@
         $barangId = $_POST["barangId"];
         $sql = "DELETE FROM `barang` WHERE `barangId`='$barangId'";   
         $result = mysqli_query($conn, $sql);
-        $filename = $_SERVER['DOCUMENT_ROOT']."/barigas/image/makan-".$barangId.".jpg";
+        $filename = $_SERVER['DOCUMENT_ROOT']."/barigas/image/barang-".$barangId.".jpg";
         if ($result){
             if (file_exists($filename)) {
                 unlink($filename);
