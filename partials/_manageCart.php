@@ -52,9 +52,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $passSql = "SELECT * FROM users WHERE id='$userId'"; 
         $passResult = mysqli_query($conn, $passSql);
         $passRow=mysqli_fetch_assoc($passResult);
-        $userName = $passRow['username'];
+        $userName = $passRow['userName'];
         if (password_verify($password, $passRow['password'])){ 
-            $sql = "INSERT INTO `orders` (`userId`, `address`, `kodePos`, `phoneNo`, `amount`, `paymentMode`, `orderStatus`, `orderDate`) VALUES ('$userId', '$address', '$kodePos', '$phone', '$amount', '0', '0', current_timestamp())";
+            $sql = "INSERT INTO `orders` (`userId`, `address`, `kodePos`, `phoneNo`, `total`, `paymentMode`, `orderStatus`, `orderDate`) VALUES ('$userId', '$address', '$kodePos', '$phone', '$amount', '0', '0', current_timestamp())";
             $result = mysqli_query($conn, $sql);
             $orderId = $conn->insert_id;
             if ($result){

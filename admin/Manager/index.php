@@ -1,8 +1,8 @@
 <?php 
     session_start();
-    if(isset($_SESSION['adminloggedin']) && $_SESSION['adminloggedin']==true){
+    if(isset($_SESSION['managerloggedin']) && $_SESSION['managerloggedin']==true){
         $adminloggedin= true;
-        $userId = $_SESSION['adminuserId'];
+        $userId = $_SESSION['manageruserId'];
         
     }
     else{
@@ -58,6 +58,6 @@
 <?php
     }
     else{
-        header("location: /barigas/Manager/login.php");
+        header("location: /barigas/admin/login.php");
     }
 ?>

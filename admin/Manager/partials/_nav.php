@@ -18,9 +18,9 @@
                       <span class="nav_name">Dashboard</span>
                     </a>
 
-                   <a href="Daftar_barang.php" class="nav_link nav-Daftarbarang"> 
+                   <a href="grafikPenjualan.php" class="nav_link nav-Daftarbarang"> 
                     <i class='bx bx-message-square-detail nav_icon'></i> 
-                    <span class="nav_name">Daftar Barang</span> 
+                    <span class="nav_name">Grafik</span> 
                   </a>
                   <a href="Laporan.php" class="nav_link nav-categoryManage">
                       <i class='bx bx-folder nav_icon' ></i>

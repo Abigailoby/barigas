@@ -68,7 +68,7 @@
                 data-aos-offset="300"
                 data-aos-easing="ease-in-sine">
                         <div class="card" style="width: 18rem;border: 1px groove #5572fe;">
-                            <img src="image/makan-'.$barangId. '.jpg" class="card-img-top" alt="image for this barang" width="249px" height="270px">
+                            <img src="image/barang-'.$barangId. '.jpg" class="card-img-top" alt="image for this barang" width="249px" height="270px">
                             <div class="card-body">
                                 <h5 class="card-title">' . substr($barangName, 0, 20). '...</h5>
                                 <h6 style="color: #ff0000">Rp. '.$barangPrice. '/-</h6>

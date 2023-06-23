@@ -13,7 +13,7 @@
 <?php
 
         require 'partials/_dbconnect.php';
-        require 'partials/_nav1.php';
+        require 'partials/_nav.php';
 
 ?>
 

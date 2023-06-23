@@ -10,11 +10,12 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="icon" href="../../image/icon.png" type="image/x-icon">
 <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <title>Grafik Penjualan</title>
 <?php
 
 require 'partials/_dbconnect.php';
-require 'partials/_nav1.php';
+require 'partials/_nav.php';
 
 ?>
 
@@ -38,6 +39,10 @@ require 'partials/_nav1.php';
     }
 </style>
 
+<!-- GRAFIK  -->
+<body>
+    
+
 <div class="container-fluid" style="margin-top:98px">
     <div class="col-lg-12">
         <div class="row">
@@ -55,7 +60,7 @@ require 'partials/_nav1.php';
                                 <br>
                                 <div class="chart"
                                     style="color: black; background-color: white ; border: 4px solid #F9D701; border-radius: 0.6em;">
-                                    <canvas id="chart" class="chart-canvas" height="400" width="500"></canvas>
+                                    <canvas id="myChart" class="chart-canvas" height="400" width="500"></canvas>
                                     <!-- <canvas id="bar-chart" class="bar-chart-canvas" height="100"></canvas> -->
                                 </div>
                                 <br>
@@ -80,141 +85,54 @@ require 'partials/_nav1.php';
             </div>
             <!-- FORM Panel -->
 
-            <!-- Table Panel -->
-            <div class="col" data-aos="zoom-in-right" data-aos-duration="1000">
-                <div class="card mt-3" style="border:1px solid #5572fe">
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover mb-0">
-                                <thead style="background-color: #fac031;">
+            <!-- Grafikk end -->
 
-                                    <th rowspan="2" style="text-align:center; border:3px  vertical-align:middle; ">Bulan</th>
-                                    <th colspan="2" style="text-align:center; border-right:3px ">Terbanyak</th>
-                                    <th colspan="2" style="text-align:center;">Tersedikit</th>
+    
+<script>
+var xValues = ["Makanan", "Minuman"];
+var barColors = [
+  "#b91d47",
+  "#00aba9"
+];
 
-                                    <tr>
-                                        <th style="text-align:center;  solid white;">Nama Produk</th>
-                                        <th style="text-align:center;  solid white;">Jumlah Produk</th>
-                                        <th style="text-align:center;  solid white;">Nama Produk</th>
-                                        <th style="text-align:center;  solid white;">Jumlah Produk</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    $sql = "SELECT * FROM `kategori`";
-                                    $result = mysqli_query($conn, $sql);
-                                    $nomorct = 1;
-                                    while ($row = mysqli_fetch_assoc($result)) {
-                                        $katId = $row['kategoriId'];
-                                        $katName = $row['namaKategori'];
-                                        $katDesc = $row['kategoriDesc'];
-
-
-                                        echo '<tr>
-                                        <td class="text-center"><b>' . $nomorct++ . '</b></td>
-                                        <td><img src="/barigas/image/kateg-' . $katId . '.jpg" alt="image for this Category" width="150px" height="150px"></td>
-                                        <td>
-                                            <p>Nama : <b>' . $katName . '</b></p>
-                                            <p>Deskripsi : <b class="truncate">' . $katDesc . '</b></p>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="row mx-auto" style="width:112px">
-                                        <div class="d-grid gap-2">
-                                <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#updateCat' . $katId . '" style="width:100%">Ubah</button>';
-
-                                        if ($katId <= 4) {
-                                            echo '<button class="btn btn-danger" disabled style="width:100%">Hapus</button>';
-                                        } else {
-                                            echo ' <form action="partials/_categoryManage.php" method="POST">
-                                    <button name="removeCategory" class="btn btn-danger" style="width:100%">Hapus</button>
-                                    <input type="hidden" name="catId" value="' . $catId . '">
-                                    </form>';
-                                        }
-                                        echo '
-                               
-                                        </div>
-
-                                           </div>
-                                        </td>
-                                    </tr>';
-                                    }
-                                    ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Table Panel -->
-
-        </div>
-    </div>
-
-
-    <?php
-    $katsql = "SELECT * FROM `kategori`";
-    $katResult = mysqli_query($conn, $katsql);
-    while ($katRow = mysqli_fetch_assoc($katResult)) {
-        $katId = $katRow['kategoriId'];
-        $katName = $katRow['namaKategori'];
-        $katDesc = $katRow['kategoriDesc'];
-
-        ?>
-
-        <!-- Modal -->
-        <div class="modal fade" id="updateCat<?php echo $katId; ?>" tabindex="-1" role="dialog"
-            aria-labelledby="updateCat<?php echo $katId; ?>" aria-hidden="true" style="width: -webkit-fill-available;">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header pala">
-                        <h5 class="modal-title" id="updateCat<?php echo $katId; ?>">Category Id: <b>
-                                <?php echo $katId; ?>
-                            </b></h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="partials/_categoryManage.php" method="post" enctype="multipart/form-data">
-                            <div class="text-left my-2 row" style="border-bottom: 2px solid #dee2e6;">
-                                <div class="form-group col-md-8">
-                                    <b><label for="image">Gambar</label></b>
-                                    <input type="file" name="catimage" id="catimage" accept=".jpg" class="form-control"
-                                        required style="border:none;"
-                                        onchange="document.getElementById('itemPhoto').src = window.URL.createObjectURL(this.files[0])">
-                                    <small id="Info" class="form-text text-muted mx-3">Mohon upload .jpg.</small>
-                                    <input type="hidden" id="catId" name="catId" value="<?php echo $katId; ?>">
-                                    <button type="submit" class="btn goo my-1" name="updateCatPhoto">Perbarui
-                                        Gambar</button>
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <img src="/barigas/image/kateg-<?php echo $katId; ?>.jpg" id="itemPhoto"
-                                        name="itemPhoto" alt="Category image" width="100" height="100">
-                                </div>
-                            </div>
-                        </form>
-                        <form action="partials/_categoryManage.php" method="post">
-                            <div class="text-left my-2">
-                                <b><label for="name">Nama</label></b>
-                                <input class="form-control" id="name" name="name" value="<?php echo $katName; ?>"
-                                    type="text" required>
-                            </div>
-                            <div class="text-left my-2">
-                                <b><label for="desc">Deskripsi</label></b>
-                                <textarea class="form-control" id="desc" name="desc" rows="2" required
-                                    minlength="6"><?php echo $katDesc; ?></textarea>
-                            </div>
-                            <input type="hidden" id="catId" name="catId" value="<?php echo $katId; ?>">
-                            <button type="submit" class="btn goo d-grid gap-2 col-4 mx-auto"
-                                name="updateCategory">Perbarui</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+new Chart("myChart", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: [
         <?php
-    }
-    ?>
 
+        $bar = "SELECT SUM(itemQuantity) FROM orderitems where barangId = '2'";
+        $hasilnya = mysqli_query($conn, $bar);
+        $row1 = mysqli_fetch_row($hasilnya);
+        $count1 = $row1[0];
+
+        $bari = "SELECT SUM(itemQuantity) FROM orderitems where barangId = '3' ";
+        $hasilnya1 = mysqli_query($conn, $bari);
+        $row2 = mysqli_fetch_row($hasilnya1);
+        $count2 = $row2[0];
+
+        echo $count1 .",";
+        echo $count2;
+
+
+
+?>
+
+
+      ]
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "World Wide Wine Production 2018"
+    }
+  }
+});
+</script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -234,3 +152,6 @@ require 'partials/_nav1.php';
     <script>
         AOS.init();
     </script>
+
+    
+</body>

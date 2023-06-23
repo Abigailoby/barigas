@@ -38,7 +38,7 @@
         echo  '<div class="card  bg-light mt-5 shadow">
                 <div class = "card-body">
             <div class="col-md-4 float-lg-start">
-                <img src="image/makan-'.$barangId. '.jpg" width="249px" height="262px">
+                <img src="image/barang-'.$barangId. '.jpg" width="249px" height="262px">
             </div>
             <div class="col-md-8 my-4 ms-5 des" >
                 <h3>' . $barangName . '</h3>

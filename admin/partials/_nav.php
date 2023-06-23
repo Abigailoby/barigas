@@ -1,7 +1,7 @@
 <body id="body-pd">
     <header class="header" id="header">
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-        <div class="header_img"> <img src="../image/urang-1.jpg" alt="poto"> </div>
+        <div class="header_img"> <img src="../image/urang-1.jpg" alt="poto" onError="this.src ='/barigas/image/profilePic.jpg'"> </div>
     </header>
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">

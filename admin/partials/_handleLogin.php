@@ -27,6 +27,23 @@
                     </script>";
             }
         }
+        if($userType == 2) {
+            if (password_verify($password, $row['password'])){ 
+                session_start();
+                $_SESSION['managerloggedin'] = true;
+                $_SESSION['managerusername'] = $username;
+                $_SESSION['manageruserId'] = $userId;
+                header("location: /barigas/admin/Manager/index.php");
+                exit();
+            } 
+            else{
+                echo "
+                    <script>
+                    alert('Username Atau Password Salah');
+                    document.location.href = '/barigas/admin/login.php';
+                    </script>";
+            }
+        }
         else {
             echo "
                     <script>

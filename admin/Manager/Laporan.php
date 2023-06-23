@@ -13,7 +13,7 @@
 <?php
 
         require 'partials/_dbconnect.php';
-        require 'partials/_nav1.php';
+        require 'partials/_nav.php';
 
 ?>
 
@@ -163,7 +163,7 @@
                         $address = $row['address'];
                         $kodePos = $row['kodePos'];
                         $phoneNo = $row['phoneNo'];
-                        $amount = $row['amount'];
+                        $amount = $row['total'];
                         $orderDate = $row['orderDate'];
                         $paymentMode = $row['paymentMode'];
 

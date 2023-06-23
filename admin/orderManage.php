@@ -163,7 +163,7 @@
                         $address = $row['address'];
                         $kodePos = $row['kodePos'];
                         $phoneNo = $row['phoneNo'];
-                        $amount = $row['amount'];
+                        $amount = $row['total'];
                         $orderDate = $row['orderDate'];
                         $paymentMode = $row['paymentMode'];
 
