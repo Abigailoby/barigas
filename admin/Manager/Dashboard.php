@@ -16,6 +16,7 @@
 require 'partials/_dbconnect.php';
 require 'partials/_nav.php';
 
+
 ?>
 
 <style>
@@ -47,7 +48,7 @@ require 'partials/_nav.php';
                     <div class="w-100">
                         <div class="row">
                             <div class="col-sm-6">
-                                
+
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="row">
@@ -61,11 +62,29 @@ require 'partials/_nav.php';
                                                 </div>
                                             </div>
                                         </div>
-                                        <h1 class="mt-1 mb-3">Rp 14.212</h1>
-                                        
+                                        <?php
+                                        $sql = "SELECT SUM(total) AS total_sum FROM orders";
+                                        $result = $conn->query($sql);
+
+                                        if ($result->num_rows > 0) {
+                                            $row = $result->fetch_assoc();
+                                            $totalSum = $row["total_sum"];
+                                        } else {
+                                            $totalSum = 0;
+                                        }
+
+                                        $result->free_result();
+                                        ?>
+
+                                        <?php
+                                        $html = '<h5 class="mt-1 mb-3">Rp ' . $totalSum . '</h5>';
+                                        echo $html;
+                                        ?>
+
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-sm-6">
                                 <div class="card">
                                     <div class="card-body">
@@ -80,11 +99,30 @@ require 'partials/_nav.php';
                                                 </div>
                                             </div>
                                         </div>
-                                        <h1 class="mt-1 mb-3">64</h1>
-                                        
+                                        <?php
+                                        $sql = "SELECT COUNT(orderId) AS order_count FROM orders";
+                                        $result = $conn->query($sql);
+
+                                        if ($result->num_rows > 0) {
+                                            $row = $result->fetch_assoc();
+                                            $orderCount = $row["order_count"];
+                                        } else {
+                                            $orderCount = 0;
+                                        }
+
+                                        $result->free_result();
+                                        ?>
+
+
+                                        <?php
+                                        $html = '<h5 class="mt-1 mb-3">' . $orderCount . '</h5>';
+                                        echo $html;
+                                        ?>
+
+
                                     </div>
                                 </div>
-                               
+
                             </div>
                         </div>
                     </div>
@@ -93,89 +131,34 @@ require 'partials/_nav.php';
                 <div class="col-xl-6 col-xxl-7">
                     <div class="card flex-fill w-100">
                         <div class="card-header">
-<!--isinya chart buatnampilin data-->
+                            <!--isinya chart buatnampilin data-->
                             <h5 class="card-title mb-0">Grafik</h5>
                         </div>
                         <div class="card-body py-3">
-                            <div class="chart chart-sm">
-                                <canvas id="chartjs-dashboard-line"></canvas>
+                            <div class="chart"
+                                style="color: black; background-color: white; border: 4px solid #F9D701; border-radius: 0.6em; width: 400px; height: 300px;">
+                                <canvas id="myChart" class="chart-canvas"></canvas>
+                                <?php require 'grafikAjah.php'; ?>
                             </div>
+
+
                         </div>
                     </div>
                 </div>
+
+
+
             </div>
 
             <!-- data Analysis -->
 
-            
+
 
         </div>
     </div>
 
 
-    <?php
-    $katsql = "SELECT * FROM `kategori`";
-    $katResult = mysqli_query($conn, $katsql);
-    while ($katRow = mysqli_fetch_assoc($katResult)) {
-        $katId = $katRow['kategoriId'];
-        $katName = $katRow['namaKategori'];
-        $katDesc = $katRow['kategoriDesc'];
 
-        ?>
-
-        <!-- Modal -->
-        <div class="modal fade" id="updateCat<?php echo $katId; ?>" tabindex="-1" role="dialog"
-            aria-labelledby="updateCat<?php echo $katId; ?>" aria-hidden="true" style="width: -webkit-fill-available;">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header pala">
-                        <h5 class="modal-title" id="updateCat<?php echo $katId; ?>">Category Id: <b>
-                                <?php echo $katId; ?>
-                            </b></h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="partials/_categoryManage.php" method="post" enctype="multipart/form-data">
-                            <div class="text-left my-2 row" style="border-bottom: 2px solid #dee2e6;">
-                                <div class="form-group col-md-8">
-                                    <b><label for="image">Gambar</label></b>
-                                    <input type="file" name="catimage" id="catimage" accept=".jpg" class="form-control"
-                                        required style="border:none;"
-                                        onchange="document.getElementById('itemPhoto').src = window.URL.createObjectURL(this.files[0])">
-                                    <small id="Info" class="form-text text-muted mx-3">Mohon upload .jpg.</small>
-                                    <input type="hidden" id="catId" name="catId" value="<?php echo $katId; ?>">
-                                    <button type="submit" class="btn goo my-1" name="updateCatPhoto">Perbarui
-                                        Gambar</button>
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <img src="/barigas/image/kateg-<?php echo $katId; ?>.jpg" id="itemPhoto"
-                                        name="itemPhoto" alt="Category image" width="100" height="100">
-                                </div>
-                            </div>
-                        </form>
-                        <form action="partials/_categoryManage.php" method="post">
-                            <div class="text-left my-2">
-                                <b><label for="name">Nama</label></b>
-                                <input class="form-control" id="name" name="name" value="<?php echo $katName; ?>"
-                                    type="text" required>
-                            </div>
-                            <div class="text-left my-2">
-                                <b><label for="desc">Deskripsi</label></b>
-                                <textarea class="form-control" id="desc" name="desc" rows="2" required
-                                    minlength="6"><?php echo $katDesc; ?></textarea>
-                            </div>
-                            <input type="hidden" id="catId" name="catId" value="<?php echo $katId; ?>">
-                            <button type="submit" class="btn goo d-grid gap-2 col-4 mx-auto"
-                                name="updateCategory">Perbarui</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <?php
-    }
-    ?>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
