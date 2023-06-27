@@ -9,7 +9,7 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
 <link rel = "icon" href ="../image/icon.png" type = "image/x-icon">
 <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
-<title>Menu</title>
+<title>Barang</title>
 <?php
 
         require 'partials/_dbconnect.php';
@@ -135,7 +135,7 @@
 												<div class="row mx-auto" style="width:112px">
 												<div class="d-grid gap-2">
                                 <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#updateItem' .$barangId. '" style="width:100%">Ubah</button>
-                                <form action="partials/_menuManage.php" method="POST">
+                                <form action="partials/_barangManage.php" method="POST">
                                 <button name="removeItem" class="btn btn-danger" style="width:100%">Hapus</button>
                                 <input type="hidden" name="barangId" value="'.$barangId.'">
                                 </form>
@@ -178,7 +178,7 @@
         </button>
       </div>
       <div class="modal-body">
-	  	<form action="partials/_menuManage.php" method="post" enctype="multipart/form-data">
+	  	<form action="partials/_barangManage.php" method="post" enctype="multipart/form-data">
 		    <div class="text-left my-2 row" style="border-bottom: 2px solid #dee2e6;">
 		   		<div class="form-group col-md-8">
 					<b><label for="image">Gambar</label></b>
@@ -188,11 +188,11 @@
 					<button type="submit" class="btn goo my-1 mt-2" name="updateItemPhoto">Perbarui Gambar</button>
 				</div>
 				<div class="form-group col-md-4">
-					<img src="/barigas/image/makan-<?php echo $barangId; ?>.jpg" id="itemPhoto" name="itemPhoto" alt="item image" width="100" height="100">
+					<img src="/barigas/image/barang-<?php echo $barangId; ?>.jpg" id="itemPhoto" name="itemPhoto" alt="item image" width="100" height="100">
 				</div>
 			</div>
 		</form>
-		<form action="partials/_menuManage.php" method="post">
+		<form action="partials/_barangManage.php" method="post">
             <div class="text-left my-2">
                 <b><label for="name">Nama</label></b>
                 <input class="form-control" id="name" name="name" value="<?php echo $barangName; ?>" type="text" required>
