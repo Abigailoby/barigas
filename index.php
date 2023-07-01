@@ -137,7 +137,7 @@
                     <img src="image/kateg-'.$id. '.jpg" class="card-img-top" alt="image for this kategori" width="249px" height="270px">
                     <div class="card-body">
                       <h5 class="card-title"><a href="viewBarangList.php?katid=' . $id . '">' . $kat . '</a></h5>
-                      <p class="card-text">' . substr($desc, 0, 30). '... </p>
+                      <p class="card-text">' . substr($desc, 0, 20). '... </p>
                       <a href="viewBarangList.php?katid=' . $id . '" class="btn btn-primary d-grid gap-2 col-auto mx-auto">Selengkapnya</a>
                     </div>
                   </div>
