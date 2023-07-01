@@ -91,7 +91,7 @@ require 'partials/_nav.php';
                                 <div class="container-fluid">
 
                                     <div class="chart mt-3" style="color: black; background-color: white ; border: 4px solid #F9D701; border-radius: 0.6em;">
-                                        <canvas id="lineChart" class="chart-canvas p-2" height="400px" width="500px" style="position: relative; width:-webkit-fill-available; height:auto"></canvas>
+                                        <canvas id="lineChart" class="chart-canvas p-2 " height="400px" width="500px" style="position: relative; width:-webkit-fill-available; height:auto"></canvas>
                                         <!-- <canvas id="bar-chart" class="bar-chart-canvas" height="100"></canvas> -->
                                     </div>
                                 </div>
