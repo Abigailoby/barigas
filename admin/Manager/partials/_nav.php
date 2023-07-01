@@ -19,7 +19,7 @@
                     </a>
 
                    <a href="grafikPenjualan.php" class="nav_link nav-Daftarbarang"> 
-                    <i class='bx bx-message-square-detail nav_icon'></i> 
+                   <i class="fa fa-line-chart"></i>
                     <span class="nav_name">Grafik</span> 
                   </a>
                   <a href="Laporan.php" class="nav_link nav-categoryManage">

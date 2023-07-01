@@ -136,10 +136,10 @@
             $deliveryDetailSql = "SELECT * FROM `delivery` WHERE `orderId`= $orderid";
             $deliveryDetailResult = mysqli_query($conn, $deliveryDetailSql);
             $deliveryDetailRow = mysqli_fetch_assoc($deliveryDetailResult);
-            $trackId = isset($deliveryDetailRow['id']);
-            $deliveryBoyName = isset($deliveryDetailRow['deliveryName']);
-            $deliveryBoyPhoneNo = isset($deliveryDetailRow['deliveryPhone']);
-            $deliveryTime = isset($deliveryDetailRow['deliveryTime']);
+            $trackId = isset($deliveryDetailRow['id']) ? $deliveryDetailRow['id'] : '';
+            $deliveryBoyName = isset($deliveryDetailRow['deliveryName']) ? $deliveryDetailRow['deliveryName'] : '';
+            $deliveryBoyPhoneNo = isset($deliveryDetailRow['deliveryPhone']) ? $deliveryDetailRow['deliveryPhone'] : '';
+            $deliveryTime = isset($deliveryDetailRow['deliveryTime']) ? $deliveryDetailRow['deliveryTime'] : '';
             if($status == 4)
                 $deliveryTime = 'xx';
         }
