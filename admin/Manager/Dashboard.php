@@ -10,6 +10,8 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="icon" href="../../image/icon.png" type="image/x-icon">
 <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <title>Dashboard</title>
 <?php
 
@@ -37,6 +39,15 @@ require 'partials/_nav.php';
     .pala {
         background-color: #fac031;
     }
+
+    canvas{
+        margin: auto;
+    }
+
+    #lineChart {
+        height: 90% !important;
+        width: 100%;
+    }
 </style>
 
 <div class="container-fluid" style="margin-top:98px">
@@ -44,14 +55,11 @@ require 'partials/_nav.php';
         <div class="row">
             <!-- Data Analysis -->
             <div class="row">
-                <div class="col-xl-6 col-xxl-5 d-flex">
                     <div class="w-100">
-                        <div class="row">
-                            <div class="col-sm-6">
+                        <div class="row justify-content-between">
 
-                                <div class="card">
+                                <div class="card col-lg-5 p-3 ">
                                     <div class="card-body">
-                                        <div class="row">
                                             <div class="col mt-0">
                                                 <h5 class="card-title">Penjualan</h5>
                                             </div>
@@ -61,7 +69,6 @@ require 'partials/_nav.php';
                                                     <i class="align-middle" data-feather="users"></i>
                                                 </div>
                                             </div>
-                                        </div>
                                         <?php
                                         $sql = "SELECT SUM(total) AS total_sum FROM orders";
                                         $result = $conn->query($sql);
@@ -83,12 +90,9 @@ require 'partials/_nav.php';
 
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="col-sm-6">
-                                <div class="card">
+                                <div class="card col-lg-5 p-3">
                                     <div class="card-body">
-                                        <div class="row">
                                             <div class="col mt-0">
                                                 <h5 class="card-title">Orders</h5>
                                             </div>
@@ -98,7 +102,6 @@ require 'partials/_nav.php';
                                                     <i class="align-middle" data-feather="dollar-sign"></i>
                                                 </div>
                                             </div>
-                                        </div>
                                         <?php
                                         $sql = "SELECT COUNT(orderId) AS order_count FROM orders";
                                         $result = $conn->query($sql);
@@ -123,28 +126,32 @@ require 'partials/_nav.php';
                                     </div>
                                 </div>
 
-                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-xl-6 col-xxl-7">
+                
+                <div class="col-lg-12 mt-3">
                     <div class="card flex-fill w-100">
                         <div class="card-header">
                             <!--isinya chart buatnampilin data-->
                             <h5 class="card-title mb-0">Grafik</h5>
                         </div>
-                        <div class="card-body py-3">
-                            <div class="chart1">
+                        <div class="row">
+                        <div class="card-body col-lg-6 py-3">
                                 <b>GRAFIK PENJUALAN</b>
-                                <div class="chart3"
-                                    style="color: black; background-color: white; border: 4px solid #F9D701; border-radius: 0.6em; width: 300px; height: 300px;">
+                                <div onclick="location.href='pie.php'" style="color: black; background-color: white; border: 4px solid #F9D701; border-radius: 0.6em; width: 100%; height: 300px; cursor:pointer;" >
                                     <canvas id="myChart" class="chart-canvas"></canvas>
-                                    <?php require 'grafikAjah.php'; ?>
                                 </div>
-                                
+                                </div>
+                                <div class="card-body col-lg-6 py-3" >
+                                    <b>GRAFIK PENDAPATAN</b>
+                                <div onclick="location.href='line.php'" style="cursor:pointer; color: black; background-color: white; border: 4px solid #F9D701; border-radius: 0.6em; width: 100%; height: 300px;">
+                                    <canvas id="lineChart" class="chart-canvas"></canvas>
+                                </div>
+                                </div>
 
-                            </div>
+                            
+                        
                         </div>
 
 
@@ -164,6 +171,219 @@ require 'partials/_nav.php';
     </div>
 </div>
 
+<!-- piechart -->
+<script>
+  var namanya = [<?php
+
+$mak = "SELECT MAX(kategoriId) FROM kategori";
+$go = mysqli_query($conn, $mak);
+
+while ($barisea = mysqli_fetch_assoc($go)) {
+    $lulu = $barisea['MAX(kategoriId)'];
+}
+
+$totnama = 1;
+while ($totnama <= $lulu) {
+    $ngaran = "SELECT namaKategori FROM `kategori` where kategoriId = '$totnama'";
+    $keluaran = mysqli_query($conn, $ngaran);
+    $rowwe = mysqli_fetch_row($keluaran);
+    $bismillah = isset($rowwe[0]) ? $rowwe[0] : '';
+
+    echo "'" . $bismillah . "'" . ", ";
+    $totnama++;
+}
+
+?>];
+
+var barColors = [
+            "#b91d47",
+            "#00aba9",
+            "#2b5797",
+            "#e8c3b9",
+            "#1e7145"
+        ];
+
+new Chart("myChart", {
+  type: "pie",
+  data: {
+    labels: namanya,
+    datasets: [{
+      backgroundColor: barColors,
+      data: [
+                        <?php
+
+                        $bts = "SELECT MAX(orderId) FROM orderitems";
+                        $coba = mysqli_query($conn, $bts);
+
+                        while ($baris = mysqli_fetch_assoc($coba)) {
+                            $lala = $baris['MAX(orderId)'];
+                        }
+
+                        $bnykbrng = 1;
+                        while ($bnykbrng < $lala) {
+
+                            $bar1 = "SELECT SUM(oi.itemQuantity) FROM orderitems oi JOIN barang b ON(oi.barangId = b.barangId) JOIN kategori k ON(k.kategoriId = b.barangKategoriId) WHERE b.barangKategoriId = $bnykbrng; ";
+                            $hasilnya = mysqli_query($conn, $bar1);
+                            $row1 = mysqli_fetch_row($hasilnya);
+                            $count1 = $row1[0];
+
+                            echo $count1 . ",";
+                            $bnykbrng++;
+                        }
+
+
+
+                        ?>
+
+
+                    ]
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "World Wide Wine Production 2018"
+    }
+  }
+});
+</script>
+
+<!-- piechart end -->
+
+<!-- linechart -->
+<script type="text/javascript">
+        var barColors = [
+            "#b91d47",
+            "#00aba9",
+            "#2b5797",
+            "#e8c3b9",
+            "#1e7145"
+        ];
+
+
+
+        new Chart("lineChart", {
+            type: "line",
+
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "Mei", "Juni", "Juli", "Agst", "Sep", "Oct", "Nov", "Des"],
+                datasets: [{
+                    fill: false,
+                    lineTension: 0,
+                    label: "Pemasukan",
+                    backgroundColor: "rgba(0,0,255,1.0)",
+                    borderColor: "rgba(0,0,255,0.1)",
+                    data: [
+                        <?php
+
+
+
+                        $jun = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____01%'";
+                        $juni = mysqli_query($conn, $jun);
+                        $row1 = mysqli_fetch_row($juni);
+                        $count1 = $row1[0];
+
+                        echo $count1 . ",";
+
+                        $Feb = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____02%'";
+                        $febr = mysqli_query($conn, $Feb);
+                        $row2 = mysqli_fetch_row($febr);
+                        $count2 = $row2[0];
+
+                        echo $count2 . ",";
+
+                        $Mar = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____03%'";
+                        $mare = mysqli_query($conn, $Mar);
+                        $row3 = mysqli_fetch_row($mare);
+                        $count3 = $row3[0];
+
+                        echo $count3 . ",";
+
+                        $Apr = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____04%'";
+                        $apri = mysqli_query($conn, $Apr);
+                        $row4 = mysqli_fetch_row($apri);
+                        $count4 = $row4[0];
+
+                        echo $count4 . ",";
+
+                        $Mei = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____05%'";
+                        $mei = mysqli_query($conn, $Mei);
+                        $row5 = mysqli_fetch_row($mei);
+                        $count5 = $row5[0];
+
+                        echo $count5 . ",";
+
+                        $Juni = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____06%'";
+                        $juni = mysqli_query($conn, $Juni);
+                        $row6 = mysqli_fetch_row($juni);
+                        $count6 = $row6[0];
+
+                        echo $count6 . ",";
+
+                        $Juli = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____07%'";
+                        $juli = mysqli_query($conn, $Juli);
+                        $row7 = mysqli_fetch_row($juli);
+                        $count7 = $row7[0];
+
+                        echo $count7 . ",";
+
+                        $Agst = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____08%'";
+                        $agst = mysqli_query($conn, $Agst);
+                        $row8 = mysqli_fetch_row($agst);
+                        $count8 = $row8[0];
+
+                        echo $count8 . ",";
+
+                        $Sep = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____09%'";
+                        $sep = mysqli_query($conn, $Sep);
+                        $row9 = mysqli_fetch_row($sep);
+                        $count9 = $row9[0];
+
+                        echo $count9 . ",";
+
+                        $Oct = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____10%'";
+                        $oct = mysqli_query($conn, $Oct);
+                        $row10 = mysqli_fetch_row($oct);
+                        $count10 = $row10[0];
+
+                        echo $count10 . ",";
+
+                        $Nov = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____11%'";
+                        $nov = mysqli_query($conn, $Nov);
+                        $row11 = mysqli_fetch_row($nov);
+                        $count11 = $row11[0];
+
+                        echo $count11 . ",";
+
+                        $Des = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____12%'";
+                        $des = mysqli_query($conn, $Des);
+                        $row12 = mysqli_fetch_row($des);
+                        $count12 = $row12[0];
+
+                        echo $count12;
+                        ?>
+
+
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                legend: {
+                    display: false
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            min: 6,
+                            max: 16
+                        }
+                    }],
+                }
+            }
+        });
+    </script>
+<!-- linechart end -->
 
 
 

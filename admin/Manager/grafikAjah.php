@@ -45,41 +45,73 @@ require 'partials/_nav.php';
 
 
     
+<!-- piechart -->
 <script>
+  var namanya = [<?php
+
+$mak = "SELECT MAX(kategoriId) FROM kategori";
+$go = mysqli_query($conn, $mak);
+
+while ($barisea = mysqli_fetch_assoc($go)) {
+    $lulu = $barisea['MAX(kategoriId)'];
+}
+
+$totnama = 1;
+while ($totnama <= $lulu) {
+    $ngaran = "SELECT namaKategori FROM `kategori` where kategoriId = '$totnama'";
+    $keluaran = mysqli_query($conn, $ngaran);
+    $rowwe = mysqli_fetch_row($keluaran);
+    $bismillah = isset($rowwe[0]) ? $rowwe[0] : '';
+
+    echo "'" . $bismillah . "'" . ", ";
+    $totnama++;
+}
+
+?>];
+
 var xValues = ["Makanan", "Minuman"];
 var barColors = [
-  "#b91d47",
-  "#00aba9"
-];
+            "#b91d47",
+            "#00aba9",
+            "#2b5797",
+            "#e8c3b9",
+            "#1e7145"
+        ];
 
 new Chart("myChart", {
   type: "pie",
   data: {
-    labels: xValues,
+    labels: namanya,
     datasets: [{
       backgroundColor: barColors,
       data: [
-        <?php
+                        <?php
 
-        $bar = "SELECT SUM(itemQuantity) FROM orderitems where barangId = '2'";
-        $hasilnya = mysqli_query($conn, $bar);
-        $row1 = mysqli_fetch_row($hasilnya);
-        $count1 = $row1[0];
+                        $bts = "SELECT MAX(orderId) FROM orderitems";
+                        $coba = mysqli_query($conn, $bts);
 
-        $bari = "SELECT SUM(itemQuantity) FROM orderitems where barangId = '3' ";
-        $hasilnya1 = mysqli_query($conn, $bari);
-        $row2 = mysqli_fetch_row($hasilnya1);
-        $count2 = $row2[0];
+                        while ($baris = mysqli_fetch_assoc($coba)) {
+                            $lala = $baris['MAX(orderId)'];
+                        }
 
-        echo $count1 .",";
-        echo $count2;
+                        $bnykbrng = 0;
+                        while ($bnykbrng < $lala) {
+
+                            $bar1 = "SELECT SUM(itemQuantity) FROM `orderitems` RIGHT JOIN kategori ON kategori.kategoriId = orderitems.barangId and orderitems.barangId = $bnykbrng; ";
+                            $hasilnya = mysqli_query($conn, $bar1);
+                            $row1 = mysqli_fetch_row($hasilnya);
+                            $count1 = $row1[0];
+
+                            echo $count1 . ",";
+                            $bnykbrng++;
+                        }
 
 
 
-?>
+                        ?>
 
 
-      ]
+                    ]
     }]
   },
   options: {
@@ -90,6 +122,143 @@ new Chart("myChart", {
   }
 });
 </script>
+
+<!-- piechart end -->
+
+<!-- linechart -->
+<script type="text/javascript">
+        var barColors = [
+            "#b91d47",
+            "#00aba9",
+            "#2b5797",
+            "#e8c3b9",
+            "#1e7145"
+        ];
+
+
+
+        new Chart("lineChart", {
+            type: "line",
+
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "Mei", "Juni", "Juli", "Agst", "Sep", "Oct", "Nov", "Des"],
+                datasets: [{
+                    fill: false,
+                    lineTension: 0,
+                    label: "Pemasukan",
+                    backgroundColor: "rgba(0,0,255,1.0)",
+                    borderColor: "rgba(0,0,255,0.1)",
+                    data: [
+                        <?php
+
+
+
+                        $jun = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____01%'";
+                        $juni = mysqli_query($conn, $jun);
+                        $row1 = mysqli_fetch_row($juni);
+                        $count1 = $row1[0];
+
+                        echo $count1 . ",";
+
+                        $Feb = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____02%'";
+                        $febr = mysqli_query($conn, $Feb);
+                        $row2 = mysqli_fetch_row($febr);
+                        $count2 = $row2[0];
+
+                        echo $count2 . ",";
+
+                        $Mar = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____03%'";
+                        $mare = mysqli_query($conn, $Mar);
+                        $row3 = mysqli_fetch_row($mare);
+                        $count3 = $row3[0];
+
+                        echo $count3 . ",";
+
+                        $Apr = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____04%'";
+                        $apri = mysqli_query($conn, $Apr);
+                        $row4 = mysqli_fetch_row($apri);
+                        $count4 = $row4[0];
+
+                        echo $count4 . ",";
+
+                        $Mei = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____05%'";
+                        $mei = mysqli_query($conn, $Mei);
+                        $row5 = mysqli_fetch_row($mei);
+                        $count5 = $row5[0];
+
+                        echo $count5 . ",";
+
+                        $Juni = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____06%'";
+                        $juni = mysqli_query($conn, $Juni);
+                        $row6 = mysqli_fetch_row($juni);
+                        $count6 = $row6[0];
+
+                        echo $count6 . ",";
+
+                        $Juli = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____07%'";
+                        $juli = mysqli_query($conn, $Juli);
+                        $row7 = mysqli_fetch_row($juli);
+                        $count7 = $row7[0];
+
+                        echo $count7 . ",";
+
+                        $Agst = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____08%'";
+                        $agst = mysqli_query($conn, $Agst);
+                        $row8 = mysqli_fetch_row($agst);
+                        $count8 = $row8[0];
+
+                        echo $count8 . ",";
+
+                        $Sep = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____09%'";
+                        $sep = mysqli_query($conn, $Sep);
+                        $row9 = mysqli_fetch_row($sep);
+                        $count9 = $row9[0];
+
+                        echo $count9 . ",";
+
+                        $Oct = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____10%'";
+                        $oct = mysqli_query($conn, $Oct);
+                        $row10 = mysqli_fetch_row($oct);
+                        $count10 = $row10[0];
+
+                        echo $count10 . ",";
+
+                        $Nov = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____11%'";
+                        $nov = mysqli_query($conn, $Nov);
+                        $row11 = mysqli_fetch_row($nov);
+                        $count11 = $row11[0];
+
+                        echo $count11 . ",";
+
+                        $Des = "SELECT SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____12%'";
+                        $des = mysqli_query($conn, $Des);
+                        $row12 = mysqli_fetch_row($des);
+                        $count12 = $row12[0];
+
+                        echo $count12;
+                        ?>
+
+
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                legend: {
+                    display: false
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            min: 6,
+                            max: 16
+                        }
+                    }],
+                }
+            }
+        });
+    </script>
+<!-- linechart end -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

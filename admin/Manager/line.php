@@ -37,23 +37,23 @@ require 'partials/_nav.php';
         background-color: #fac031;
     }
 
-    canvas {
-        margin: auto;
-        height: 400px;
-        width: 500px;
+    .chart-canvas {
+        margin: 10px;
     }
-</style>
 
-<!-- GRAFIK  -->
+
+    
+    
+</style>
 
 <body>
 
+<!-- content -->
 
-    <div class="container-fluid" style="margin-top:98px">
-        <div class="col-lg-12">
+    
             <div class="row">
-                <!-- FORM Panel -->
-                <div class="col-lg-6 mx-auto" data-aos="zoom-in-right" data-aos-duration="1000">
+                <!-- grafik-->
+                <div class="col-lg-12 mx-auto" data-aos="zoom-in-right" data-aos-duration="1000">
                     <div class="card mt-3" style="border:1px solid #5572fe">
                         <div class="card-header" style="background-color: #fac031;">
                             <h2 style="font-size:25px"><b>GRAFIK PENJUALAN PRODUK</b></h2>
@@ -63,138 +63,182 @@ require 'partials/_nav.php';
                             <div class="container">
                                 <div class="container-fluid">
 
-                                    <div class="chart mt-3" style="color: black; background-color: white ; border: 4px solid #F9D701; border-radius: 0.6em;">
-                                        <canvas id="myChart" class="chart-canvas p-2" height="400" width="500"></canvas>
-                                        <!-- <canvas id="bar-chart" class="bar-chart-canvas" height="100"></canvas> -->
+                                    <div class="chart mt-3" style="color: black; background-color: white ; border: 4px solid #F9D701; border-radius: 0.6em; width:75%; margin:auto;">
+                                        <canvas id="lineChart" class="chart-canvas"></canvas>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-footer mt-5 ">
-                                <div class="row ">
-                                    <div class="col-md-12 text-center ">
-                                        <a href="Dashboard.php" class="btn btn-primary  " style="color: black; background-color: #F9D701; border: 4px solid #F9D701; border-radius: 0.6em;"><b>Kembali</b></a>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
-                        </form>
                     </div>
                 </div>
-
-                <div class="col-lg-6 mx-auto" data-aos="zoom-in-right" data-aos-duration="1000">
-                    <div class="card mt-3" style="border:1px solid #5572fe">
-                        <div class="card-header" style="background-color: #fac031;">
-                            <h2 style="font-size:25px"><b>GRAFIK PEMASUKAN</b></h2>
-                        </div>
-                        <div class="card-body">
-
-                            <div class="container">
-                                <div class="container-fluid">
-
-                                    <div class="chart mt-3" style="color: black; background-color: white ; border: 4px solid #F9D701; border-radius: 0.6em;">
-                                        <canvas id="lineChart" class="chart-canvas p-2 " height="400px" width="500px"></canvas>
-                                        <!-- <canvas id="bar-chart" class="bar-chart-canvas" height="100"></canvas> -->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer mt-5 ">
-                                <div class="row ">
-                                    <div class="col-md-12 text-center ">
-                                        <a href="Dashboard.php" class="btn btn-primary  " style="color: black; background-color: #F9D701; border: 4px solid #F9D701; border-radius: 0.6em;"><b>Kembali</b></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- FORM Panel -->
-
+                
     <!-- Grafikk end -->
 
-    <!-- piechart -->
-    <script>
-        var namanya = [<?php
+                <!-- daftar barangnya -->
 
-                        $mak = "SELECT MAX(kategoriId) FROM kategori";
-                        $go = mysqli_query($conn, $mak);
+                <div class="col-lg-12 mx-auto" data-aos="zoom-in-right" data-aos-duration="1000">
+                    <div class="card mt-3" style="border:1px solid #5572fe">
+                        
+                        <div class="card-body">
 
-                        while ($barisea = mysqli_fetch_assoc($go)) {
-                            $lulu = $barisea['MAX(kategoriId)'];
+                        <div class="table-responsive">
+						<table class="table table-bordered table-hover mb-0">
+							<thead style="background-color: #fac031;">
+								<tr>
+									<th class="text-center">Nama Bulan</th>
+									<th class="text-center" >Total</th>
+								</tr>
+							</thead>
+							<tbody>
+                            <?php
+
+$jun = "SELECT MONTHNAME('2023-01-01') AS nama_bulan
+,SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____01%'";
+$juni = mysqli_query($conn, $jun);
+$row1 = mysqli_fetch_row($juni);
+$count1 = $row1[0];
+$count1h = $row1[1];
+
+
+$Feb = "SELECT MONTHNAME('2023-02-01') AS nama_bulan, SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____02%'";
+$febr = mysqli_query($conn, $Feb);
+$row2 = mysqli_fetch_row($febr);
+$count2 = $row2[0];
+$count2h = $row2[1];
+
+$Mar = "SELECT MONTHNAME('2023-03-01') AS nama_bulan, SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____03%'";
+$mare = mysqli_query($conn, $Mar);
+$row3 = mysqli_fetch_row($mare);
+$count3 = $row3[0];
+$count3h = $row3[1];
+
+$Apr = "SELECT MONTHNAME('2023-04-01') AS nama_bulan, SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____04%'";
+$apri = mysqli_query($conn, $Apr);
+$row4 = mysqli_fetch_row($apri);
+$count4 = $row4[0];
+$count4h = $row4[1];
+
+$Mei = "SELECT MONTHNAME('2023-05-01') AS nama_bulan, SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____05%'";
+$mei = mysqli_query($conn, $Mei);
+$row5 = mysqli_fetch_row($mei);
+$count5 = $row5[0];
+$count5h = $row5[1];
+
+$Juni = "SELECT MONTHNAME('2023-06-01') AS nama_bulan, SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____06%'";
+$juni = mysqli_query($conn, $Juni);
+$row6 = mysqli_fetch_row($juni);
+$count6 = $row6[0];
+$count6h = $row6[1];
+
+
+$Juli = "SELECT MONTHNAME('2023-07-01') AS nama_bulan, SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____07%'";
+$juli = mysqli_query($conn, $Juli);
+$row7 = mysqli_fetch_row($juli);
+$count7 = $row7[0];
+$count7h = $row7[1];
+
+
+$Agst = "SELECT MONTHNAME('2023-08-01') AS nama_bulan, SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____08%'";
+$agst = mysqli_query($conn, $Agst);
+$row8 = mysqli_fetch_row($agst);
+$count8 = $row8[0];
+$count8h = $row8[1];
+
+$Sep = "SELECT MONTHNAME('2023-09-01') AS nama_bulan, SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____09%'";
+$sep = mysqli_query($conn, $Sep);
+$row9 = mysqli_fetch_row($sep);
+$count9 = $row9[0];
+$count9h = $row9[1];
+
+$Oct = "SELECT MONTHNAME('2023-10-01') AS nama_bulan, SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____10%'";
+$oct = mysqli_query($conn, $Oct);
+$row10 = mysqli_fetch_row($oct);
+$count10 = $row10[0];
+$count10h = $row10[1];
+
+$Nov = "SELECT MONTHNAME('2023-11-01') AS nama_bulan, SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____11%'";
+$nov = mysqli_query($conn, $Nov);
+$row11 = mysqli_fetch_row($nov);
+$count11 = $row11[0];
+$count11h = $row11[1];
+
+$Des = "SELECT MONTHNAME('2023-12-01') AS nama_bulan, SUM(total) FROM `orders` WHERE orderStatus = '1' AND orderDate LIKE '_____12%'";
+$des = mysqli_query($conn, $Des);
+$row12 = mysqli_fetch_row($des);
+$count12 = $row12[0];
+$count12h = $row12[1];
+
+$bul = array($count1,$count2,$count3,$count4,$count5,$count6,$count7,$count8,$count9,$count10,$count11,$count12);
+$jull = array($count1h,$count2h,$count3h,$count4h,$count5h,$count6h,$count7h,$count8h,$count9h,$count10h,$count11h,$count12h);
+
+
+// sort($jull);
+$bleng = count($jull);
+
+$age = array($count1=>$count1h,$count2=>$count2h,$count3=>$count3h,$count4=>$count4h,$count5=>$count5h,$count6=>$count6h,$count7=>$count7h,$count8=>$count8h,$count9=>$count9h,$count10=>$count10h,$count11=>$count11h,$count12=>$count12h);
+
+// $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+asort($age);
+
+foreach($age as $x => $x_value) {
+
+    if($x_value!= "") {
+    echo '<tr>
+                                
+                                <td>
+                                    <p class="text-center"><b>' . $x. '</b></p>
+                                </td>
+                                <td class="text-center">';
+
+                                if($x_value > 1500000) {
+                                echo  '  <p class="text-center text-danger">' . $x_value . '</>';
+                                }
+
+                                else{
+                                echo ' <p class="text-center text-success">' . $x_value . '</>';
+                                
+                                }
+                                
+                                '</td>
+                            </tr>';
                         }
+}
 
-                        $totnama = 1;
-                        while ($totnama <= $lulu) {
-                            $ngaran = "SELECT namaKategori FROM `kategori` where kategoriId = '$totnama'";
-                            $keluaran = mysqli_query($conn, $ngaran);
-                            $rowwe = mysqli_fetch_row($keluaran);
-                            $bismillah = isset($rowwe[0]) ? $rowwe[0] : '';
+?>
 
-                            echo "'" . $bismillah . "'" . ", ";
-                            $totnama++;
-                        }
+                            
+							</tbody>
+						</table>
+                        <div class="card-footer mt-5 ">
+                                <div class="row ">
+                                    <div class="col-md-12 text-center ">
+                                        <a href="Dashboard.php" class="btn btn-primary  " style="color: black; background-color: #F9D701; border: 4px solid #F9D701; border-radius: 0.6em;"><b>Kembali</b></a>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+                        </div>
+                    </div>
+                </div>
 
-                        ?>];
-        var barColors = [
-            "#b91d47",
-            "#00aba9",
-            "#2b5797",
-            "#e8c3b9",
-            "#1e7145"
-        ];
-
-        new Chart("myChart", {
-            type: "pie",
-            data: {
-                labels: namanya,
-                datasets: [{
-                    backgroundColor: barColors,
-                    data: [
-                        <?php
-
-                        $bts = "SELECT MAX(orderId) FROM orderitems";
-                        $coba = mysqli_query($conn, $bts);
-
-                        while ($baris = mysqli_fetch_assoc($coba)) {
-                            $lala = $baris['MAX(orderId)'];
-                        }
-
-                        $bnykbrng = 0;
-                        while ($bnykbrng < $lala) {
-
-                            $bar1 = "SELECT SUM(itemQuantity) FROM `orderitems` RIGHT JOIN kategori ON kategori.kategoriId = orderitems.barangId and orderitems.barangId = $bnykbrng; ";
-                            $hasilnya = mysqli_query($conn, $bar1);
-                            $row1 = mysqli_fetch_row($hasilnya);
-                            $count1 = $row1[0];
-
-                            echo $count1 . ",";
-                            $bnykbrng++;
-                        }
+                <!-- daftar barangnya end -->
 
 
+							</tbody>
+						</table>
+						</div>
+					</div>
+				</div>
+			</div>
+                <!-- tes end -->
 
-                        ?>
+            </div>
 
-
-                    ]
-                }]
-            },
-            options: {
-                responsive: true,
-                title: {
-                    display: true,
-                    text: "World Wide Wine Production 2018"
-                }
-            }
-        });
-    </script>
-    <!-- piechart end -->
+<!-- content end -->
 
     <!-- linechart -->
-    <script type="text/javascript">
+<script type="text/javascript">
         var barColors = [
             "#b91d47",
             "#00aba9",
@@ -326,7 +370,8 @@ require 'partials/_nav.php';
             }
         });
     </script>
-    <!-- linechart end -->
+<!-- linechart end -->
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
