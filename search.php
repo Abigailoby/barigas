@@ -18,6 +18,36 @@
     #cont {
         min-height : 515px;
     }
+
+    .card-body .btn-primary {
+        background-color: #ff3900ff;
+        border: 1px solid #fda12dff;
+    }
+
+   .card-body .btn-primary:focus, .card-body .btn-primary:focus {
+        background-color: #ff3900ff;
+        border: 1px solid #fda12dff;
+    }
+
+    .card-body .btn-primary:hover{
+        background-color: #fda12dff;
+        border: 1px solid #ff3900ff;
+    }
+    .card-body .btn-primary:active, .card-body .btn-primary:active {
+        background-color: #ff3900ff;
+        border: 1px solid #fda12dff;
+    }
+
+    .card-body .btn-primary.active.focus,
+    .card-body .btn-primary.active:focus,
+    .card-body .btn-primary.active:hover,
+    .card-body .btn-primary:active.focus,
+    .card-body.btn-primary:active:focus,
+    .card-body .btn-primary:active:hover {
+        background-color: #fda12dff;
+        border: 1px solid #ff3900ff;
+    }
+    
     </style>
 </head>
 <body>
@@ -43,7 +73,7 @@
                 
                 echo '<div class="col-xs-3 col-sm-3 col-md-3">
                     <div class="card" style="width: 18rem;">
-                        <img src="image/card-'.$katId. '.jpg" class="card-img-top" alt="image for this barang" width="249px" height="270px">
+                        <img src="image/kateg-'.$katId. '.jpg" class="card-img-top" alt="image for this barang" width="249px" height="270px">
                         <div class="card-body">
                             <h5 class="card-title"><a href="viewBarangList.php?katid=' . $katId . '">' . $katname . '</a></h5>
                             <p class="card-text">' . substr($katdesc, 0, 29). '...</p>

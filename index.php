@@ -37,6 +37,35 @@
   footer img{
     width:150px;
   }
+
+  .card-body .btn-primary {
+        background-color: #ff3900ff;
+        border: 1px solid #fda12dff;
+    }
+
+   .card-body .btn-primary:focus, .card-body .btn-primary:focus {
+        background-color: #ff3900ff;
+        border: 1px solid #fda12dff;
+    }
+
+    .card-body .btn-primary:hover{
+        background-color: #fda12dff;
+        border: 1px solid #ff3900ff;
+    }
+    .card-body .btn-primary:active, .card-body .btn-primary:active {
+        background-color: #ff3900ff;
+        border: 1px solid #fda12dff;
+    }
+
+    .card-body .btn-primary.active.focus,
+    .card-body .btn-primary.active:focus,
+    .card-body .btn-primary.active:hover,
+    .card-body .btn-primary:active.focus,
+    .card-body.btn-primary:active:focus,
+    .card-body .btn-primary:active:hover {
+        background-color: #fda12dff;
+        border: 1px solid #ff3900ff;
+    }
 </style>
 
 </head>
@@ -138,7 +167,7 @@
                     <div class="card-body">
                       <h5 class="card-title"><a href="viewBarangList.php?katid=' . $id . '">' . $kat . '</a></h5>
                       <p class="card-text">' . substr($desc, 0, 20). '... </p>
-                      <a href="viewBarangList.php?katid=' . $id . '" class="bton  d-grid gap-2 col-auto mx-auto">Selengkapnya</a>
+                      <a href="viewBarangList.php?katid=' . $id . '" class="btn btn-primary  d-grid gap-2 col-auto mx-auto">Selengkapnya</a>
                     </div>
                   </div>
                 </div>';
@@ -202,34 +231,34 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <div class="carousel-caption ">
-                    <div class="person">
-                      <img src="./image/urang-1.jpg" alt="Pelanggan">
+                    <div class="person" >
+                      <img src="./image/alam.png" alt="Pelanggan" style="height: 100%;">
                     </div>
                     <div class="content text-center">
                       <p>"Multi-vitaminnya murah- murah!"</p>
-                      <h5>Ahmad Irfan</h5>
+                      <h5>bre</h5>
                     </div>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="carousel-caption ">
                     <div class="person">
-                      <img src="./image/urang-1.jpg" alt="Pelanggan">
+                      <img src="./image/lakian.png" alt="Pelanggan">
                     </div>
                     <div class="content text-center">
                       <p>"Barangnya lengkap semua."</p>
-                      <h5>Raihan Abigail</h5>
+                      <h5>anu</h5>
                     </div>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="carousel-caption">
                     <div class="person">
-                      <img src="./image/urang-1.jpg" alt="Pelanggan">
+                      <img src="./image/legenda.png" alt="Pelanggan" style="height: 100%;">
                     </div>
                     <div class="content text-center">
                       <p>"Berigas pengirimannya cepat."</p>
-                      <h5>Muhammad Akhtar</h5>
+                      <h5>ciciw</h5>
                     </div>
                   </div>
                 </div>
@@ -252,82 +281,7 @@
   </section>
   <!-- testi end -->
 
-  <!-- tim -->
   
-  <section class="tim" data-aos="fade-down" data-aos-duration="1500">
-    <div class="container">
-      <div class="row py-5 text-center">
-        <div class="col-lg-6 m-auto">
-          <h1>Our Team</h1>
-          <div class="line3 my-4"></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3 py-3 px-3">
-          <div class="card p-2">
-            <div class="card-body">
-              <img src="./image/urang-1.jpg" class="img-fluid pb-3 ">
-              <h4 class="aranitah text-center">Irfan</h4>
-              <div class="sosial text-center py-3">
-                <i class="fa-brands fa-facebook-f"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-linkedin-in"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 py-3 px-3">
-          <div class="card p-2">
-            <div class="card-body">
-              <img src="./image/urang-1.jpg" class="img-fluid pb-3 ">
-              <h4 class="aranitah text-center">Fahni</h4>
-              <div class="sosial text-center py-3">
-                <i class="fa-brands fa-facebook-f"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-linkedin-in"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 py-3 px-3">
-          <div class="card p-2">
-            <div class="card-body">
-              <img src="./image/urang-1.jpg" class="img-fluid pb-3 ">
-              <h4 class="aranitah text-center">Akhtar</h4>
-              <div class="sosial text-center py-3">
-                <i class="fa-brands fa-facebook-f"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-linkedin-in"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 py-3 px-3">
-          <div class="card p-2">
-            <div class="card-body">
-              <img src="./image/urang-1.jpg" class="img-fluid pb-3 ">
-              <h4 class="aranitah text-center">Fauzan</h4>
-              <div class="sosial text-center py-3">
-                <i class="fa-brands fa-facebook-f"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-linkedin-in"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- tim end -->
 
   <?php require 'partials/_footer.php';?>
 

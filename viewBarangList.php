@@ -22,6 +22,35 @@
     .kosong{
         min-height: 570px;
     }
+
+    .card-body .btn-primary {
+        background-color: #ff3900ff;
+        border: 1px solid #fda12dff;
+    }
+
+   .card-body .btn-primary:focus, .card-body .btn-primary:focus {
+        background-color: #ff3900ff;
+        border: 1px solid #fda12dff;
+    }
+
+    .card-body .btn-primary:hover{
+        background-color: #fda12dff;
+        border: 1px solid #ff3900ff;
+    }
+    .card-body .btn-primary:active, .card-body .btn-primary:active {
+        background-color: #ff3900ff;
+        border: 1px solid #fda12dff;
+    }
+
+    .card-body .btn-primary.active.focus,
+    .card-body .btn-primary.active:focus,
+    .card-body .btn-primary.active:hover,
+    .card-body .btn-primary:active.focus,
+    .card-body.btn-primary:active:focus,
+    .card-body .btn-primary:active:hover {
+        background-color: #fda12dff;
+        border: 1px solid #ff3900ff;
+    }
     </style>
   
 </head>
@@ -81,13 +110,13 @@
                                     if($quaExistRows == 0) {
                                         echo '<form action="partials/_manageCart.php" method="POST" style="display:contents;">
                                               <input type="hidden" name="itemId" value="'.$barangId. '">
-                                              <button type="submit" name="addToCart" class="btn btn-primary mx-3 btn-sm " style="width:48%;height:35px" >Tambah Keranjang</button>';
+                                              <button type="submit" name="addToCart" class="btn btn-primary mx-3 btn-sm " style="width:48%;height:40px" >Tambah Keranjang</button>';
                                     }else {
                                         echo ' <a href="viewCart.php"><button class="btn btn-primary mx-3 btn-sm " style="width:39%;height:35px">Ke Keranjang</button></a>';
                                     }
                                 }
                                 else{
-                                    echo '<button class="btn btn-primary mx-3 btn-sm " data-bs-toggle="modal" data-bs-target="#loginModal" style="width:50%;height:35px #ff3900">Tambah Keranjang</button>';
+                                    echo '<button class="btn btn-primary mx-3 btn-sm " data-bs-toggle="modal" data-bs-target="#loginModal" style="width:50%;height:35px">Tambah Keranjang</button>';
                                 }
                             echo '</form>                            
                                 <a href="viewBarang.php?barangid=' . $barangId . '" class="mx-auto btn-sm" style="display:contents;"><button class="btn btn-primary " style="width:30%">Lihat</button></a> 

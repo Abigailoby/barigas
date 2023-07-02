@@ -183,9 +183,10 @@ body{
 }
 
 .about{
-    background: url(../image/bingungop2.png);
+    background: url(../image/sportsop.jpg);
     background-size: cover;
     background-position: 50% 50%;
+    opacity: 0.5;
     height: 100vh;
     width: 100%;
     
@@ -195,12 +196,13 @@ body{
     font-size: 3rem;
     font-weight: bold;
     padding-top: 100px;
+    color: #F7F6FB;
 }
 
 .about p{
     font-size: 18px;
     font-weight: 500;
-    /* color: grey; */
+    color: #F7F6FB;
 }
 
 .mbtn1{

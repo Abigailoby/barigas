@@ -63,78 +63,7 @@
   </section>
   <!-- About Food Kita end -->
 
-  <!--Team-->
-  <section class="tim" >
-    <div class="container py-4">
-      <div class="aboutus">
-        <h3 class="text-center">ABOUT US</h3>
-      </div>
-      <div class="row py-3">
-      <div class="col-xl-6  mt-3  p-3" data-aos="zoom-in" >
-          <div class="card p-2 shadow" style="height: 35rem;">
-            <div class="card-body" >
-              <img src="./image/urang-1.jpg" >
-              <h6 class="head1 text-center py-2 mt-3">MUHAMMAD IRFAN ABIGAIL</h6>
-              <h6 class="text-center pb-2">21523028</h6>
-            </div>
-            <ul class="list-group ">
-              <li class="list-group-item">Asal : <br> <p class="card-text">Buntok, Kalimantan Tengah</p></li>
-              <li class="list-group-item">Tanggal Lahir : <br><p class="card-text"> 23 Agustus 2002</p></li>
-              <li class="list-group-item">Pendidikan : <br><p class="card-text">SDN 3 DUSUN SELATAN <br> SMPN 1 DUSUN SELATAN <br> SMAN 1 DUSUN SELATAN</p></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xl-6 mt-3 p-3" data-aos="zoom-in">
-          <div class="card p-2 shadow" style="height: 35rem;">
-            <div class="card-body">
-              <img src="./image/urang-1.jpg" >
-              <h6 class="head1 text-center py-2 mt-3">Fahni Maharani</h6>
-              <h6 class="text-center pb-2">21523074</h6>
-            </div>
-            <ul class="list-group">
-              <li class="list-group-item">Asal : <br> <p class="card-text">Padang, Sumatera Barat</p></li>
-              <li class="list-group-item">Tanggal Lahir : <br><p class="card-text"> 25 September 2001</p></li>
-              <li class="list-group-item">Pendidikan : <br><p class="card-text">SDN 5 KAMPUNG PONDOK <br> SMP 8 PARIAMAN <br> SMAK TEKNOLOGI PLUS PADANG</p></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xl-6 mt-3 p-3" data-aos="zoom-in">
-          <div class="card p-2 shadow" style="height: 35rem;">
-            <div class="card-body">
-              <img src="./image/urang-1.jpg" >
-              <h6 class="head1 text-center py-2 mt-3">FAREESDZY AKHTARABILLAH SETIAWAN</h6>
-              <h6 class="text-center pb-2">21523140</h6>
-            </div>
-            <ul class="list-group">
-              <li class="list-group-item">Asal : <br> <p class="card-text">Boyolali, Jawa Tengah</p></li>
-              <li class="list-group-item">Tanggal Lahir : <br><p class="card-text"> 17 September 2002</p></li>
-              <li class="list-group-item">Pendidikan : <br><p class="card-text">SDN 1 AMPEL <br> SMPN 4 SALATIGA <br> SMANS BATIK 1 SURAKARTA</p></li>
-            </ul>
-          </div>
-        </div>
-      
-        
-        
-          <div class="col-xl-6 mt-3 p-3" data-aos="zoom-in">
-            <div class="card p-2 shadow" style="height: 35rem;">
-              <div class="card-body" >
-                <img src="./image/urang-1.jpg" >
-                <h6 class="head1 text-center py-2 mt-3">AHMAD FAUZAN ZAKY</h6>
-                <h6 class="text-center pb-2">21523201</h6>
-              </div>
-              <ul class="list-group">
-                <li class="list-group-item">Asal : <br> <p class="card-text">Banjarbaru, Kalimantan Selatan</p></li>
-                <li class="list-group-item">Tanggal Lahir : <br><p class="card-text"> 5 Januari 2003</p></li>
-                <li class="list-group-item">Pendidikan : <br><p class="card-text">SDN Guntung Payung 1 <br> SMP-IT Qardhan Hasanah <br> SMAN 1 Banjarbaru</p></li>
-              </ul>
-            </div>
-          </div>
-        
-
-
-    </div>
-  </section>
-  <!-- tim end -->
+  
 
   <?php require 'partials/_footer.php' ?>
 

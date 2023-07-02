@@ -42,6 +42,7 @@ require 'partials/_nav.php';
 
     #myChart{
         margin-left: 20%;
+        width: 100%;
     }
 
     #lineChart {

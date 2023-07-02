@@ -8,7 +8,7 @@
 <div class="modal fade me-0" id="signupModal" tabindex="-1"  aria-labelledby="signupModal" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header" style="background-color: #fac031;">
+      <div class="modal-header" style="background-color: #fda12dff; color:white">
         <h1 class="modal-title fs-5" id="loginModal">SignUp Disini</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="border: 3px solid #5572fe;"></button>
       </div>
@@ -56,7 +56,7 @@
                   <input class="form-control" id="cpassword" name="cpassword" placeholder="Konfirmasi kata sandi" type="password" required data-toggle="password" minlength="4" maxlength="21" oninvalid="this.setCustomValidity('Masukkan kata sandi ')"
   oninput="this.setCustomValidity('')">
               </div>
-              <button type="submit" class="btn form-control mt-2" style="background-color: #5572fe; color: white; ">Kirim</button>
+              <button type="submit" class="btn form-control mt-2" style="background-color: #ff3900ff; color: white; ">Kirim</button>
             </form>
             <p class="mb-0 mt-2">Sudah memiliki akun? <a href="#" data-dismiss="modal" data-bs-toggle="modal" data-bs-target="#loginModal" style="color:blue;">Login disini</a>.</p>
           </div>

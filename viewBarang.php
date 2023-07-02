@@ -16,6 +16,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   
   
+    <style>
+        .card-body .btn-primary {
+        background-color: #ff3900ff;
+        border: 1px solid #fda12dff;
+    }
+
+   .card-body .btn-primary:focus, .card-body .btn-primary:focus {
+        background-color: #ff3900ff;
+        border: 1px solid #fda12dff;
+    }
+
+    .card-body .btn-primary:hover{
+        background-color: #fda12dff;
+        border: 1px solid #ff3900ff;
+    }
+    .card-body .btn-primary:active, .card-body .btn-primary:active {
+        background-color: #ff3900ff;
+        border: 1px solid #fda12dff;
+    }
+
+    .card-body .btn-primary.active.focus,
+    .card-body .btn-primary.active:focus,
+    .card-body .btn-primary.active:hover,
+    .card-body .btn-primary:active.focus,
+    .card-body.btn-primary:active:focus,
+    .card-body .btn-primary:active:hover {
+        background-color: #fda12dff;
+        border: 1px solid #ff3900ff;
+    }
+    
+    </style>
 </head>
 <body>
     <?php include 'partials/_dbconnect.php';?>

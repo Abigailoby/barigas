@@ -79,6 +79,37 @@
         box-shadow: 0px 4px 15px -5px #0046d5;
         }
 
+        .bitin {
+            background-color: #ff3900ff;
+            color: white;
+        }
+
+        .bitin:focus, .bitin:focus {
+            background-color: #ff3900ff;
+            color: white;
+        }
+
+        .bitin:hover {
+            background-color: #ff3900ff;
+            color: white;
+        }
+
+        .bitin:active, .bitin:active {
+            background-color: #ff3900ff;
+            color: white;
+        }
+
+        .bitin.active.focus,
+        .bitin.active:focus,
+        .bitin.active:hover,
+        .bitin:active.focus,
+        .bitin:active:focus,
+        .bitin:active:hover {
+            background-color: #ff3900ff;
+            color: white;
+            border: 1px solid #fda12dff;
+        }
+
 
         @media only screen and (max-width: 767px) {
             .notfound .notfound-404 {
@@ -120,13 +151,13 @@
             <!-- poto -->
       <div class="row mt-5">
         <div class="col-lg-6 mx-auto mt-3">
-          <div class="card inpo bg-warning shadow ">
+          <div class="card inpo shadow " style="background-color: #fda12dff;">
             <div class="card-body py-5">
               <div class="text-center">
                 <img src="image/urang-<?php echo $userId;?>.jpg" onError="this.src = 'image/profilePic.jpg'" alt="error euy" class="rounded-circle bg-dark mb-3">
               </div>
                 <form action="partials/_manageProfile.php" method="POST">
-                    <small style="font-size: 14px;">Hapus Gambar: </small><button type="submit" class="btn btn-primary " name="removeProfilePic" style="font-size: 14px;padding: 3px 8px;border-radius: 9px;">Hapus</button>
+                    <small style="font-size: 14px;">Hapus Gambar: </small><button type="submit" class="btn btn-danger " name="removeProfilePic" style="font-size: 14px;padding: 3px 8px;border-radius: 9px;">Hapus</button>
                 </form>
                 <form action="partials/_manageProfile.php" method="POST" enctype="multipart/form-data" style="margin-top: 7px;">
                     <div class="upload-btn-wrapper">
@@ -134,14 +165,14 @@
                         <button class="btn upload" >Pilih</button>
                         <input type="file" name="image" id="image" accept="image/*" required>
                     </div>
-                    <button type="submit" name="updateProfilePic" class="btn btn-primary updatebtn" style="font-size:13px;padding: 3px 8px;margin-top: -24px;">Perbarui</button>
+                    <button type="submit" name="updateProfilePic" class="btn btn-success updatebtn" style="font-size:13px;padding: 3px 8px;margin-top: -24px;">Perbarui</button>
                 </form>
                 <ul class="meta list list-unstyled mt-2" style="text-align:center;">
-                  <li class="name"><?php echo $firstName." ".$lastName;?>
+                  <li class="name" style="color: white;"><?php echo $firstName." ".$lastName;?>
                       <label class="label label-info">(<?php echo $userType ?>)</label>
                   </li>
-                  <li class="email"><?php echo $email?></li>
-                  <li class="my-2"><a href="partials/_logout.php"><button class="btn btn-primary" style="font-size: 15px;padding: 3px 8px;">Keluar</button></a></li>
+                  <li class="email" style="color: white;"><?php echo $email?></li>
+                  <li class="my-2"><a href="partials/_logout.php"><button class="btn bitin" style="font-size: 15px;padding: 3px 8px;">Keluar</button></a></li>
               </ul>
             </div>
           </div>
@@ -206,7 +237,7 @@
             
             </div>
             <div class="mb-3 text-center py-2">
-            <button type="submit" name="updateProfileDetail" class="btn btn-primary form-control">Update</button>
+            <button type="submit" name="updateProfileDetail" class="btn btn-primary form-control" style="background-color: #ff3900ff;">Update</button>
                     </div>
                </from>
         </div>
