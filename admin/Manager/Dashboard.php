@@ -40,8 +40,8 @@ require 'partials/_nav.php';
         background-color: #fac031;
     }
 
-    canvas{
-        margin: auto;
+    #myChart{
+        margin-left: 20%;
     }
 
     #lineChart {
@@ -58,7 +58,7 @@ require 'partials/_nav.php';
                     <div class="w-100">
                         <div class="row justify-content-between">
 
-                                <div class="card col-lg-5 p-3 ">
+                                <div class="card col-lg-5 p-3 " style="background-color:#fda12dff; color:#F7F6FB; border:4px solid #ff3900ff;">
                                     <div class="card-body">
                                             <div class="col mt-0">
                                                 <h5 class="card-title">Penjualan</h5>
@@ -91,7 +91,7 @@ require 'partials/_nav.php';
                                     </div>
                                 </div>
 
-                                <div class="card col-lg-5 p-3">
+                                <div class="card col-lg-5 p-3" style="background-color:#fda12dff; color:#F7F6FB; border:4px solid #ff3900ff;">
                                     <div class="card-body">
                                             <div class="col mt-0">
                                                 <h5 class="card-title">Orders</h5>
@@ -130,22 +130,22 @@ require 'partials/_nav.php';
                     </div>
 
                 
-                <div class="col-lg-12 mt-3">
-                    <div class="card flex-fill w-100">
-                        <div class="card-header">
+                <div class="col-lg-12 mt-3" >
+                    <div class="card flex-fill w-100" style="border: 1px solid #ff3900ff;">
+                        <div class="card-header" style="background-color: #fda12dff; color: #F7F6FB">
                             <!--isinya chart buatnampilin data-->
                             <h5 class="card-title mb-0">Grafik</h5>
                         </div>
                         <div class="row">
                         <div class="card-body col-lg-6 py-3">
                                 <b>GRAFIK PENJUALAN</b>
-                                <div onclick="location.href='pie.php'" style="color: black; background-color: white; border: 4px solid #F9D701; border-radius: 0.6em; width: 100%; height: 300px; cursor:pointer;" >
+                                <div onclick="location.href='pie.php'" style="color: black; background-color: white; border: 4px solid #fda12dff; border-radius: 0.6em; width: 100%; height: 300px; cursor:pointer;" >
                                     <canvas id="myChart" class="chart-canvas"></canvas>
                                 </div>
                                 </div>
                                 <div class="card-body col-lg-6 py-3" >
                                     <b>GRAFIK PENDAPATAN</b>
-                                <div onclick="location.href='line.php'" style="cursor:pointer; color: black; background-color: white; border: 4px solid #F9D701; border-radius: 0.6em; width: 100%; height: 300px;">
+                                <div onclick="location.href='line.php'" style="cursor:pointer; color: black; background-color: white; border: 4px solid #fda12dff; border-radius: 0.6em; width: 100%; height: 300px;">
                                     <canvas id="lineChart" class="chart-canvas"></canvas>
                                 </div>
                                 </div>

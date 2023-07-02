@@ -7,7 +7,7 @@
         <nav class="nav">
             <div>
                <a href="index.php" class="nav_logo"> 
-               <i class='nav_logo-icon'><img src="../../image/icon.png" alt="" style="width:25px"></i>
+               <i class='nav_logo-icon'><img src="../../image/icon.png" alt="" style="width:25px;" id="loog"></i>
               <span class="nav_logo-name">Barigas</span>
              </a>
 
@@ -18,10 +18,6 @@
                       <span class="nav_name">Dashboard</span>
                     </a>
 
-                   <a href="grafikPenjualan.php" class="nav_link nav-Daftarbarang"> 
-                   <i class="fa fa-line-chart"></i>
-                    <span class="nav_name">Grafik</span> 
-                  </a>
                   <a href="Laporan.php" class="nav_link nav-categoryManage">
                       <i class='bx bx-folder nav_icon' ></i>
                       <span class="nav_name">Laporan</span>

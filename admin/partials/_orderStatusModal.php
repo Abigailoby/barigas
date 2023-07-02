@@ -12,7 +12,7 @@
 <div class="modal fade" id="orderStatus<?php echo $orderid; ?>" tabindex="-1" role="dialog" aria-labelledby="orderStatus<?php echo $orderid; ?>" aria-hidden="true" style="width: -webkit-fill-available;">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header" style="background-color: #fac031;">
+      <div class="modal-header" style="background-color: #fda12dff; color:white;">
         <h5 class="modal-title" id="orderStatus<?php echo $orderid; ?>">Status Pemesanan Dan Detail Pengiriman</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -27,7 +27,7 @@
                  </button>
             </div>
             <input type="hidden" id="orderId" name="orderId" value="<?php echo $orderid; ?>">
-            <button type="submit" class="btn mb-2 d-grid gap-2 col-4 mx-auto" name="updateStatus" style="background-color:#5572fe;color:white;">Perbarui</button>
+            <button type="submit" class="btn mb-2 d-grid gap-2 col-4 mx-auto" name="updateStatus" style="background-color:#ff3900ff;color:white;">Perbarui</button>
         </form>
         <?php 
             $deliveryDetailSql = "SELECT * FROM `delivery` WHERE `orderId`= $orderid";
@@ -56,7 +56,7 @@
                 </div>
                 <input type="hidden" id="trackId" name="trackId" value="<?php echo $trackId; ?>">
                 <input type="hidden" id="orderId" name="orderId" value="<?php echo $orderid; ?>">
-                <button type="submit" class="btn d-grid gap-2 col-4 mx-auto" name="updateDeliveryDetails" style="background-color:#fac031;">Perbarui</button>
+                <button type="submit" class="btn d-grid gap-2 col-4 mx-auto" name="updateDeliveryDetails" style="background-color:#fda12dff; color:white;">Perbarui</button>
             </form>
         <?php } ?>
       </div>

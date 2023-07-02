@@ -52,16 +52,16 @@ require 'partials/_nav.php';
             <div class="row">
                 <!-- grafik-->
                 <div class="col-lg-12 mx-auto" data-aos="zoom-in-right" data-aos-duration="1000">
-                    <div class="card mt-3" style="border:1px solid #5572fe">
-                        <div class="card-header" style="background-color: #fac031;">
-                            <h2 style="font-size:25px"><b>GRAFIK PENJUALAN PRODUK</b></h2>
+                    <div class="card mt-3" style="border:1px solid #ff3900ff">
+                        <div class="card-header" style="background-color: #fda12dff; color:#F7F6FB">
+                            <h2 style="font-size:25px"><b>PENJUALAN PRODUK</b></h2>
                         </div>
                         <div class="card-body">
 
                             <div class="container">
                                 <div class="container-fluid">
 
-                                    <div class="chart mt-3" style="color: black; background-color: white ; border: 4px solid #F9D701; border-radius: 0.6em; width:40%; margin:auto;">
+                                    <div class="chart mt-3" style="color: black; background-color: white ; border: 4px solid #fda12dff; border-radius: 0.6em; width:40%; margin:auto;">
                                         <canvas id="myChart" class="chart-canvas"></canvas>
                                     </div>
                                 </div>
@@ -76,16 +76,16 @@ require 'partials/_nav.php';
                 <!-- daftar barangnya -->
 
                 <div class="col-lg-12 mx-auto" data-aos="zoom-in-right" data-aos-duration="1000">
-                    <div class="card mt-3" style="border:1px solid #5572fe">
+                    <div class="card mt-3" style="border:1px solid #ff3900ff">
                         
                         <div class="card-body">
 
                         <div class="table-responsive">
 						<table class="table table-bordered table-hover mb-0">
-							<thead style="background-color: #fac031;">
+							<thead style="background-color: #fda12dff;">
 								<tr>
-									<th class="text-center">Jenis Barang</th>
-									<th class="text-center" >Total</th>
+									<th class="text-center" style="color:#F7F6FB">Jenis Barang</th>
+									<th class="text-center" style="color:#F7F6FB" >Total</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -132,7 +132,7 @@ require 'partials/_nav.php';
                         <div class="card-footer mt-5 ">
                                 <div class="row ">
                                     <div class="col-md-12 text-center ">
-                                        <a href="Dashboard.php" class="btn btn-primary  " style="color: black; background-color: #F9D701; border: 4px solid #F9D701; border-radius: 0.6em;"><b>Kembali</b></a>
+                                        <a href="Dashboard.php" class="btn btn-primary  " id="bulik" style="color: #F7F6FB; background-color: #fda12dff; border: 1px outset #ff3900ff; border-radius: 0.6em;"><b>Kembali</b></a>
                                     </div>
                                 </div>
                             </div>

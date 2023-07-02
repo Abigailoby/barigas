@@ -22,18 +22,48 @@ require 'partials/_nav.php';
         background: #80808045;
     }
 
-    .goo {
-        background-color: #5572fe;
-        color: white;
+    .goo{
+        background-color: #ff3900ff;
+        color:white;
     }
 
-    .goo:hover {
-        background-color: #4169E1;
-        color: white;
+    .goo:hover{
+        background-color: #fda12dff;
+        color:white;
     }
 
     .pala {
-        background-color: #fac031;
+        background-color: #fda12dff;
+        color: white;
+    }
+
+    tbody td .btn-primary {
+        background-color: #fda12dff;
+        border: 2px solid #fda12dff;
+    }
+
+    tbody td .btn-primary:focus, tbody td .btn-primary:focus {
+        background-color: #fda12dff;
+        border: 2px solid #fda12dff;
+    }
+
+    tbody td .btn-primary:hover{
+        background-color: #fda12dff;
+        border: 2px solid #ff3900ff;
+    }
+    tbody td .btn-primary:active, tbody td .btn-primary:active {
+        background-color: #fda12dff;
+        border: 2px solid #fda12dff;
+    }
+
+    tbody td .btn-primary.active.focus,
+    tbody td .btn-primary.active:focus,
+    tbody td .btn-primary.active:hover,
+    tbody td .btn-primary:active.focus,
+    tbody td .btn-primary:active:focus,
+    tbody td .btn-primary:active:hover {
+        background-color: #fda12dff;
+        border: 2px solid #ff3900ff;
     }
 </style>
 <div class="container-fluid" style="margin-top:98px">
@@ -50,8 +80,8 @@ require 'partials/_nav.php';
                 <div class="table-responsive">
                     <table class="table-striped table-bordered col-md-12 text-center">
                         <thead class="pala">
-                            <tr>
-                                <th>Id</th>
+                            <tr >
+                                <th class="p-3">Id</th>
                                 <th style="width:7%">Foto</th>
                                 <th>Nama Pengguna</th>
                                 <th>Nama</th>
@@ -277,13 +307,15 @@ while ($userRow = mysqli_fetch_assoc($userResult)) {
                                     <?php
                                     } 
                                     
-                                    else {
-                                    ?>
+                                    if($userType == 2) {
+                                        ?>
                                         <option value="0" >User</option>
                                         <option value="1">Admin</option>
                                         <option value="2" selected>Manager</option>
                                     <?php
                                     }
+                                    
+                                    
                                     ?>
                                 </select>
                             </div>
