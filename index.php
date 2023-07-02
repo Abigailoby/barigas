@@ -138,7 +138,7 @@
                     <div class="card-body">
                       <h5 class="card-title"><a href="viewBarangList.php?katid=' . $id . '">' . $kat . '</a></h5>
                       <p class="card-text">' . substr($desc, 0, 20). '... </p>
-                      <a href="viewBarangList.php?katid=' . $id . '" class="btn btn-primary d-grid gap-2 col-auto mx-auto">Selengkapnya</a>
+                      <a href="viewBarangList.php?katid=' . $id . '" class="bton  d-grid gap-2 col-auto mx-auto">Selengkapnya</a>
                     </div>
                   </div>
                 </div>';
