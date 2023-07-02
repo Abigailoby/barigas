@@ -5,28 +5,28 @@
 }
 
 .main {
-    background-color: #5572fe;
+    background-color: #fda12d;
 }
 
 
 .kata {
     /* float: left; */
     bottom: 20px;
-    border: 2px inset #fac031;
+    border: 2px inset #ff3900;
     border-radius: 10%;
 }
 
 .kata h4 {
-    color: #fac031;
+    color: #ff3900;
     font-size: 250%;
 }
 
 .kata h4 span {
-    color: #5572fe;
+    color: #fda12d;
 }
 
 .kata h1 {
-    color: #fac031;
+    color: #ff3900;
     font-size: 400%;
 }
 
@@ -39,7 +39,7 @@
 .kantinpoto img {
     float: left;
     max-width: 700%;
-    border: 5px solid #fac031;
+    border: 5px solid #ff3900;
     
 }
 

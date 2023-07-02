@@ -48,7 +48,7 @@
   
     <!-- food container starts here -->
     <div class="container my-3 "  id="cont">
-        <div class="col-lg-6 text-center bg-warning my-3 animate__animated animate__fadeInDown" style="margin:auto;border-top: 2px groove #5572fe;border-bottom: 2px groove #5572fe;">     
+        <div class="col-lg-6 text-center bg-warning my-3 animate__animated animate__fadeInDown" style="margin:auto;border-top: 2px groove #ff3900;border-bottom: 2px groove #ff3900;">     
             <h2 class="text-center"><span id="katTitle">Items</span></h2>
         </div>
         <div class="row ">
@@ -67,11 +67,11 @@
                 echo '<div class="col-xs-3 col-sm-3 col-md-3 mt-3 " data-aos="fade-right"
                 data-aos-offset="300"
                 data-aos-easing="ease-in-sine">
-                        <div class="card" style="width: 18rem;border: 1px groove #5572fe;">
+                        <div class="card" style="width: 18rem;border: 1px groove #ff3900;">
                             <img src="image/barang-'.$barangId. '.jpg" class="card-img-top" alt="image for this barang" width="249px" height="270px">
                             <div class="card-body">
                                 <h5 class="card-title">' . substr($barangName, 0, 20). '...</h5>
-                                <h6 style="color: #ff0000">Rp. '.$barangPrice. '/-</h6>
+                                <h6 style="color: #ff3900">Rp. '.$barangPrice. '/-</h6>
                                 <p class="card-text">' . substr($barangDesc, 0, 29). '...</p>   
                                 <div class="row justify-content-center" style="display:block;">';
                                 if($loggedin){
@@ -87,7 +87,7 @@
                                     }
                                 }
                                 else{
-                                    echo '<button class="btn btn-primary mx-3 btn-sm " data-bs-toggle="modal" data-bs-target="#loginModal" style="width:50%;height:35px">Tambah Keranjang</button>';
+                                    echo '<button class="btn btn-primary mx-3 btn-sm " data-bs-toggle="modal" data-bs-target="#loginModal" style="width:50%;height:35px #ff3900">Tambah Keranjang</button>';
                                 }
                             echo '</form>                            
                                 <a href="viewBarang.php?barangid=' . $barangId . '" class="mx-auto btn-sm" style="display:contents;"><button class="btn btn-primary " style="width:30%">Lihat</button></a> 

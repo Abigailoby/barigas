@@ -34,7 +34,7 @@
     <!-- product -->
   <div class="container my-3 mb-5" >
   <div class="row py-5 text-center">
-     <div class="col-lg-6 m-auto bg-warning animate__animated animate__fadeInDown" style="margin:auto;border-top: 2px groove #5572fe;border-bottom: 2px groove #5572fe;">
+     <div class="col-lg-6 m-auto bg-warning animate__animated animate__fadeInDown" style="margin:auto;border-top: 2px groove #ff3900;border-bottom: 2px groove #ff3900;">
           <h2 >Menu</h2>
         </div>
        
@@ -49,12 +49,12 @@
           $kat = $row['namaKategori'];
           $desc = $row['kategoriDesc'];
           echo '<div class=" col-auto mx-xs-auto mt-3 animate__animated animate__fadeInLeft">
-                  <div class="card" style="width: 20rem;border: 1px groove #5572fe;">
+                  <div class="card" style="width: 20rem;border: 1px groove #ff3900;">
                     <img src="image/kateg-'.$id. '.jpg" class="card-img-top" alt="image for this kategori" width="249px" height="270px">
                     <div class="card-body">
                       <h5 class="card-title"><a href="viewBarangList.php?katid=' . $id . '">' . $kat . '</a></h5>
                       <p class="card-text">' . substr($desc, 0, 25). '... </p>
-                      <a href="viewBarangList.php?katid=' . $id . '" class="btn btn-primary d-grid gap-2 col-auto mx-auto">Selengkapnya</a>
+                      <a href="viewBarangList.php?katid=' . $id . '" class="btn btn-primary d-grid gap-2 col-auto mx-auto ">Selengkapnya</a>
                     </div>
                   </div>
                 </div>';

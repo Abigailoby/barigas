@@ -61,13 +61,13 @@ body{
 
 /* welcome */
 .welcome{
-    background: #5572fe;
+    background: #fda12d;
 }
 
 .line2{
     height: 6px;
-    width: 50%;
-    background-color: #fda12dff;
+    width: 70%;
+    background-color: #ff3900;
     display: inline-block;
 }
 
@@ -83,7 +83,7 @@ body{
 }
 
 .welcome .card:hover{
-    background-color: #fda12dff;
+    background-color: #ff3900;
     color: white;
 }
 
@@ -156,7 +156,7 @@ body{
     outline: none;
     border: none;
     color: white;
-    background: #5572fe;
+    background: #ff3900;
     border-radius: 50px;
     margin: 0 auto;
     display: block;
@@ -165,8 +165,8 @@ body{
 
 .btnc:hover{
     outline: none;
-    border: 1px solid #4169E1;
-    color: #4169E1;
+    border: 1px solid #ff3900;
+    color: #ff3900;
     background: transparent;
     border-radius: 50px;
 }
@@ -178,7 +178,7 @@ body{
 .line{
     height: 6px;
     width: 30%;
-    background: #5572fe;
+    background: #ff3900;
     display: inline-block;
 }
 
@@ -222,7 +222,7 @@ body{
 
 /* testi */
 .testimonial-section{
-    background-color: #5572fe;
+    background-color: #fda12d;
 }
 .testimonial-section .carousel-item{
     margin-top: 3rem;
@@ -271,7 +271,7 @@ body{
     margin: auto;
     border-radius: 50%;
     overflow: hidden;
-    border: 5px solid #fda12dff;
+    border: 5px solid #ff3900;
     margin-bottom: 20px;
 }
 
@@ -326,7 +326,7 @@ border-radius: 50%;
 .line3{
     height: 6px;
     width: 20%;
-    background: #5572fe;
+    background: #ff3900;
     display: inline-block;
 }
 
@@ -372,6 +372,19 @@ border-radius: 50%;
 .tim .card-body:hover .sosial i{
     opacity: 1;
     transform: translateY(-50px);
+}
+.bton{
+    height: 50px;
+    width: 30%;
+    outline: none;
+    border: none;
+    color: white;
+    background: #fda12dff;
+    border-radius: 50px;
+    transition: all 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* tim end */

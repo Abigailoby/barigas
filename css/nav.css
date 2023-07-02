@@ -24,18 +24,18 @@
 }
 
 .nav-item a:hover{
-    color: #5572fe;
+    color: #ff3900;
 }
 
 
 .btncart{
-    background-color: #fac031;
-    border: 2px solid #5572fe;
+    background-color: #fda12d;
+    border: 2px solid #ff3900;
 }
 
 .btncart:hover{
-    background-color: #dfa106;
-    border: 2px solid #5572fe;
+    background-color: #fda12d;
+    border: 2px solid #ff3900;
     color: white;
     cursor: pointer;
 }
@@ -67,7 +67,7 @@
     border-radius: 20px 0px 0px 20px;
     outline: none;
     background-color: transparent;
-    border: 2px solid #fac031;
+    border: 2px solid #ff3900;
     border-right: none;
 }
 
@@ -75,14 +75,14 @@
     height: 45px;
     outline: none;
     border: none;
-    background: #5572fe;
+    background: #ff3900;
     color: white;
     border-radius: 0px 20px 20px 0px;
     margin-right: 5px;
 }
 
 .btn0:hover{
-    background-color: #4169E1;
+    background-color: #fda12d;
 }
 
 
@@ -91,7 +91,7 @@
     height: 40px;
     outline: none;
     border:3px solid #fac031;
-    background: #5572fe;
+    background: #ff3900;
     color: white;
     border-radius: 30px;
     font-weight: 700;
@@ -103,8 +103,8 @@
 .btnS{
     height: 40px;
     outline: none;
-    border:3px solid #fac031;
-    background: #5572fe;
+    border:3px solid #fda12d;
+    background: #ff3900;
     color: white;
     border-radius: 30px;
     font-weight: 700;
@@ -114,11 +114,11 @@
 }
 
 .btnL:hover{
-    background-color: #4169E1;
+    background-color: #fda12d;
 }
 
 .btnS:hover{
-    background-color: #4169E1;
+    background-color: #fda12d;
 }
 
 @media screen and (max-width:992px) {

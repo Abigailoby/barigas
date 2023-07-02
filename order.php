@@ -36,7 +36,7 @@
     }
     .table-wrapper .btn.btn-primary {
         color: #fff;
-        background: #03A9F4;
+        background: ##ff3900;
     }
     .table-wrapper .btn.btn-primary:hover {
         background: #03a3e7;
