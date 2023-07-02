@@ -22,17 +22,62 @@
         background: #80808045;
     }
 	.goo{
-        background-color: #5572fe;
+        background-color: #ff3900ff;
         color:white;
     }
 
     .goo:hover{
-        background-color: #4169E1;
+        background-color: #fda12dff;
         color:white;
     }
 
     .pala{
-        background-color: #fac031;
+        background-color: #fda12dff;
+		color: white;
+    }
+
+	.card-footer .btn-primary {
+        background-color: #ff3900ff;
+        border: 2px solid #fda12dff;
+    }
+
+    .card-footer .btn-primary:hover {
+        background-color: #ff3900ff;
+        border: 2px solid #fda12dff;
+    }
+
+    .card-footer .btn-primary:active {
+        background-color: #ff3900ff;
+        border: 2px solid #fda12dff;
+    }
+
+	tbody td .btn-primary {
+        background-color: #fda12dff;
+        border: 2px solid #ff3900ff;
+    }
+
+    tbody td .btn-primary:focus, tbody td .btn-primary:focus {
+        background-color: #fda12dff;
+        border: 2px solid #ff3900ff;
+    }
+
+    tbody td .btn-primary:hover{
+        background-color: #fda12dff;
+        border: 2px solid #ff3900ff;
+    }
+    tbody td .btn-primary:active, tbody td .btn-primary:active {
+        background-color: #fda12dff;
+        border: 2px solid #ff3900ff;
+    }
+
+    tbody td .btn-primary.active.focus,
+    tbody td .btn-primary.active:focus,
+    tbody td .btn-primary.active:hover,
+    tbody td .btn-primary:active.focus,
+    tbody td .btn-primary:active:focus,
+    tbody td .btn-primary:active:hover {
+        background-color: #fda12dff;
+        border: 2px solid #ff3900ff;
     }
 </style>
 
@@ -43,7 +88,7 @@
 			<!-- FORM Panel -->
 			<div class="col-12" data-aos="zoom-in-right" data-aos-duration="1000">
 				<form action="partials/_barangManage.php" method="post" enctype="multipart/form-data">
-				<div class="card mb-3" style="border:1px solid #5572fe">
+				<div class="card mb-3" style="border:1px solid #ff3900ff">
 					<div class="card-header pala">
 						Tambah Barang Baru
 				  	</div>
@@ -98,11 +143,11 @@
 
 			<!-- Table Panel -->
 			<div class="col-12" data-aos="zoom-in-left" data-aos-duration="1000">
-				<div class="card" style="border:1px solid #5572fe">
+				<div class="card" style="border:1px solid #ff3900ff">
 					<div class="card-body">
 						<div class="table-responsive">
 						<table class="table table-bordered table-hover mb-0">
-							<thead style="background-color: #fac031;">
+							<thead style="background-color: #fda12dff; color:white">
 								<tr>
 									<th class="text-center" >Id</th>
 									<th class="text-center">Gambar</th>

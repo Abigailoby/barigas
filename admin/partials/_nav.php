@@ -7,7 +7,7 @@
         <nav class="nav">
             <div>
                <a href="index.php" class="nav_logo"> 
-               <i class='nav_logo-icon'><img src="../image/icon.png" alt="" style="width:25px"></i>
+               <i class='nav_logo-icon'><img src="../image/icon.png" alt="" style="width:25px" id="loog"></i>
               <span class="nav_logo-name">Barigas</span>
              </a>
 

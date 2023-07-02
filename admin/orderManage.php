@@ -60,8 +60,8 @@
         margin-top: 2px;
     }
     .table-title {
-        color: black;
-        background: #fac031;		
+        color: #F7F6FB;
+        background: #fda12dff;		
         padding: 16px 25px;
         margin: -20px -25px 10px;
         border-radius: 3px 3px 0 0;
@@ -98,7 +98,7 @@
     table.table td a.view {        
         width: 30px;
         height: 30px;
-        color: #2196F3;
+        color: #ff3900ff;
         border: 2px solid;
         border-radius: 30px;
         text-align: center;
@@ -139,7 +139,7 @@
         
         <div class="table-responsive">
         <table class="table table-striped table-hover text-center" id="NoOrder">
-            <thead style="background-color: #5572fe;">
+            <thead style="background-color: #ff3900ff;">
                 <tr style="color:white;">
                     <th>Id Order</th>
                     <th>Id User</th>
