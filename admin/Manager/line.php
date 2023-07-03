@@ -247,7 +247,7 @@ require 'partials/_nav.php';
             type: "line",
 
             data: {
-                labels: ["Jan", "Feb", "Mar", "Apr", "Mei", "Juni", "Juli", "Agst", "Sep", "Oct", "Nov", "Des"],
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
                 datasets: [{
                     fill: false,
                     lineTension: 0,
