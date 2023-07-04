@@ -53,7 +53,7 @@ require 'partials/_nav.php';
         <div class="col-lg-12 mx-auto" data-aos="zoom-in-right" data-aos-duration="1000">
             <div class="card mt-3" style="border:1px solid #ff3900ff">
                 <div class="card-header" style="background-color: #fda12dff; color:#F7F6FB">
-                    <h2 style="font-size:25px"><b>Pendapatan Perbulan</b></h2>
+                    <h2 style="font-size:25px"><b>PENDAPATAN PERBULAN</b></h2>
                 </div>
                 <div class="card-body">
 
