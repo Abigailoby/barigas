@@ -189,9 +189,9 @@ require 'partials/_nav.php';
                                 <td class="text-center">';
 
                                         if ($x_value > 1500000) {
-                                            echo  '  <p class="text-center text-danger">' . $x_value . '</>';
+                                            echo  '  <p class="text-center text-success">' . $x_value . '</>';
                                         } else {
-                                            echo ' <p class="text-center text-success">' . $x_value . '</>';
+                                            echo ' <p class="text-center text-danger">' . $x_value . '</>';
                                         }
 
                                         '</td>
