@@ -60,8 +60,8 @@
         margin-top: 2px;
     }
     .table-title {
-        color: black;
-        background: #fac031;		
+        color: #F7F6FB;
+        background: #fda12dff;		
         padding: 16px 25px;
         margin: -20px -25px 10px;
         border-radius: 3px 3px 0 0;
@@ -139,8 +139,9 @@
         
         <div class="table-responsive">
         <table class="table table-striped table-hover text-center" id="NoOrder">
-            <thead style="background-color: #5572fe;">
+            <thead style="background-color: #ff3900ff;">
                 <tr style="color:white;">
+                    <th>No</th>
                     <th>Id Order</th>
                     <th>Id User</th>
                     <th>Alamat</th>
@@ -154,7 +155,7 @@
             </thead>
             <tbody>
                 <?php
-                    $sql = "SELECT * FROM `orders`";
+                    $sql = "SELECT * FROM `orders` order BY orderId desc";
                     $result = mysqli_query($conn, $sql);
                     $counter = 0;
                     while($row = mysqli_fetch_assoc($result)){
@@ -176,7 +177,7 @@
                         $orderStatus = $row['orderStatus'];
                         $counter++;
                         
-                        echo '<tr>
+                        echo '<tr><td>' . $counter . '</td>
                                 <td>' . $orderId . '</td>
                                 <td>' . $Id . '</td>
                                 <td data-bs-toggle="tooltip" title="' .$address. '">' . substr($address, 0, 20) . '...</td>

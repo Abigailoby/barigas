@@ -141,6 +141,7 @@
         <table class="table table-striped table-hover text-center" id="NoOrder">
             <thead style="background-color: #ff3900ff;">
                 <tr style="color:white;">
+                    <th>No</th>
                     <th>Id Order</th>
                     <th>Id User</th>
                     <th>Alamat</th>
@@ -154,7 +155,7 @@
             </thead>
             <tbody>
                 <?php
-                    $sql = "SELECT * FROM `orders`";
+                    $sql = "SELECT * FROM `orders` order by orderId desc";
                     $result = mysqli_query($conn, $sql);
                     $counter = 0;
                     while($row = mysqli_fetch_assoc($result)){
@@ -177,6 +178,7 @@
                         $counter++;
                         
                         echo '<tr>
+                                <td>' . $counter . '</td>
                                 <td>' . $orderId . '</td>
                                 <td>' . $Id . '</td>
                                 <td data-bs-toggle="tooltip" title="' .$address. '">' . substr($address, 0, 20) . '...</td>

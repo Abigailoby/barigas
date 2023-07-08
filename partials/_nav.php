@@ -25,7 +25,7 @@ echo '<nav class="navbar navbar-expand-lg bg-light sticky-top ">
         <a class="nav-link ms-1" aria-current="page" href="index.php">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link ms-1" href="menu.php">Menu</a>
+        <a class="nav-link ms-1" href="menu.php">Product</a>
       </li>
 
       <li class="nav-item">
