@@ -154,7 +154,7 @@
             </thead>
             <tbody>
                 <?php
-                    $sql = "SELECT * FROM orders order BY orderId desc";
+                    $sql = "SELECT * FROM `orders` order BY orderId desc";
                     $result = mysqli_query($conn, $sql);
                     $counter = 0;
                     while($row = mysqli_fetch_assoc($result)){
