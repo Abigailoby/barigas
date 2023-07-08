@@ -92,7 +92,7 @@ require 'partials/_nav.php';
                                     </div>
                                 </div>
 
-                                <div class="card col-lg-5 p-3" style="background-color:#fda12dff; color:#F7F6FB; border:4px solid #ff3900ff;">
+                                <div class="card col-lg-5 p-3 mt-3" style="background-color:#fda12dff; color:#F7F6FB; border:4px solid #ff3900ff;">
                                     <div class="card-body">
                                             <div class="col mt-0">
                                                 <h5 class="card-title">Orders</h5>
