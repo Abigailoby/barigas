@@ -69,14 +69,14 @@
                                     echo '<tr>
                                             <td>' . $counter . '</td>
                                             <td>' . $barangName . '</td>
-                                            <td>' . $barangPrice . '</td>
+                                            <td>' . number_format($barangPrice, 0, ",", ".") . '</td>
                                             <td>
                                                 <form id="frm' . $barangId . '">
                                                     <input type="hidden" name="barangId" value="' . $barangId . '">
                                                     <input type="number" name="quantity" value="' . $Quantity . '" class="text-center" onchange="updateCart(' . $barangId . ')" onkeyup="return false" style="width:60px" min=1 oninput="check(this)" onClick="this.select();">
                                                 </form>
                                             </td>
-                                            <td>' . $total . '</td>
+                                            <td>' . number_format($total, 0, ",", ".") . '</td>
                                             <td>
                                                 <form action="partials/_manageCart.php" method="POST">
                                                     <button name="removeItem" class="btn btn-sm btn-outline-danger">Hapus</button>
@@ -99,14 +99,14 @@
                     <div class="pt-4 border bg-light rounded p-3">
                         <h5 class="mb-3 text-uppercase font-weight-bold text-center">Pesanan</h5>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0 bg-light">Total Harga<span>Rp. <?php echo $totalPrice ?></span></li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0 bg-light">Total Harga<span>Rp. <?php echo number_format($totalPrice, 0, ",", ".") ?></span></li>
                             <li class="list-group-item d-flex justify-content-between align-items-center px-0 bg-light">Pengiriman<span>Rp. 0</span></li>
                             <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3 bg-light">
                                 <div>
                                     <strong>Total</strong>
                                     <strong><p class="mb-0">(termasuk Pajak & Biaya)</p></strong>
                                 </div>
-                                <span><strong>Rp. <?php echo $totalPrice ?></strong></span>
+                                <span><strong>Rp. <?php echo number_format($totalPrice, 0, ",", ".") ?></strong></span>
                             </li>
                         </ul>
                         <div class="form-check">

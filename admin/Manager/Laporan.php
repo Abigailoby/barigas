@@ -182,7 +182,7 @@
                                 <td>' . $Id . '</td>
                                 <td data-bs-toggle="tooltip" title="' .$address. '">' . substr($address, 0, 20) . '...</td>
                                 <td>' . $phoneNo . '</td>
-                                <td>' . $amount . '</td>
+                                <td>' . number_format($amount, 0, ",", ".") . '</td>
                                 <td>' . $paymentMode . '</td>
                                 <td>' . $orderDate . '</td>
                                 <td><a href="#" data-bs-toggle="modal" data-bs-target="#orderStatus' . $orderId . '" class="view"><i class="material-icons">&#xE5C8;</i></a></td>

@@ -93,14 +93,14 @@
                 $barangPrice = $row['hargaBarang'];
                 $barangDesc = $row['barangDesc'];
             
-                echo '<div class="col-xs-3 col-sm-3 col-md-3 mt-3 " data-aos="fade-right"
+                echo '<div class=" col mt-3 " data-aos="fade-right"
                 data-aos-offset="300"
                 data-aos-easing="ease-in-sine">
                         <div class="card" style="width: 18rem;border: 1px groove #ff3900;">
                             <img src="image/barang-'.$barangId. '.jpg" class="card-img-top" alt="image for this barang" width="249px" height="270px">
-                            <div class="card-body">
+                            <div class="card-body" >
                                 <h5 class="card-title">' . substr($barangName, 0, 20). '...</h5>
-                                <h6 style="color: #ff3900">Rp. '.$barangPrice. '/-</h6>
+                                <h6 style="color: #ff3900">Rp. '.number_format($barangPrice, 0, ",", "."). '/-</h6>
                                 <p class="card-text">' . substr($barangDesc, 0, 29). '...</p>   
                                 <div class="row justify-content-center" style="display:block;">';
                                 if($loggedin){

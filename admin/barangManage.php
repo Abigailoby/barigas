@@ -103,7 +103,7 @@
 							</div>
                             <div class="form-group">
 								<label class="control-label">Harga</label>
-								<input type="number" class="form-control" name="price" required min="1">
+								<input type="text" class="form-control" name="price" required min="1" oninput="formatRupiah(this)">
 							</div>	
 							<div class="form-group">
 								<label class="control-label">Kategori: </label>
@@ -174,7 +174,7 @@
                                             <td>
                                                 <p>Nama : <b>' .$barangName. '</b></p>
                                                 <p>Deskripsi : <b class="truncate">' .$barangDesc. '</b></p>
-                                                <p>Harga : <b>' .$barangPrice. '</b></p>
+                                                <p>Harga : <b>' .number_format($barangPrice, 0, ",", "."). '</b></p>
                                             </td>
                                             <td class="text-center">
 												<div class="row mx-auto" style="width:112px">
@@ -245,7 +245,7 @@
 			<div class="text-left my-2 row">
 				<div class="form-group col-md-6">
                 	<b><label for="price">Harga</label></b>
-                	<input class="form-control" id="price" name="price" value="<?php echo $barangPrice; ?>" type="number" min="1" required>
+                	<input class="form-control" id="price" name="price" value="<?php echo number_format($barangPrice, 0, ",", "."); ?>" type="number" min="1" required>
 				</div>
 				<div class="form-group col-md-6">
 					<b><label for="catId">Id Kategori</label></b>

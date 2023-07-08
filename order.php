@@ -36,7 +36,7 @@
     }
     .table-wrapper .btn.btn-primary {
         color: #fff;
-        background: ##ff3900;
+        background: #ff3900;
     }
     .table-wrapper .btn.btn-primary:hover {
         background: #03a3e7;
@@ -55,8 +55,8 @@
         margin-top: 2px;
     }
     .table-title {
-        color: black;
-        background: #fac031;		
+        color: #F7F6FB;
+        background: #fda12dff;		
         padding: 16px 25px;
         margin: -20px -25px 10px;
         border-radius: 3px 3px 0 0;
@@ -143,7 +143,7 @@
             
         <div class="table-responsive">
             <table class="table table-striped table-hover text-center" >
-                <thead style="background-color:#5572fe;">
+                <thead style="background-color:#ff3900ff;">
                     <tr style="color:white;">
 
                         <th>Id Order</th>
@@ -183,7 +183,7 @@
                                     <td>' . $orderId . '</td>
                                     <td>' . substr($address, 0, 20) . '...</td>
                                     <td>' . $phoneNo . '</td>
-                                    <td>' . $amount . '</td>
+                                    <td>' . number_format($amount, 0, ",", ".") . '</td>
                                     <td>' . $paymentMode . '</td>
                                     <td>' . $orderDate . '</td>
                                     <td><a href="#" data-bs-toggle="modal" data-bs-target="#orderStatus' . $orderId . '" class="view"><i class="material-icons">&#xE5C8;</i></a></td>

@@ -72,7 +72,7 @@ require 'partials/_nav.php';
 
         <!-- Grafikk end -->
 
-        <!-- daftar barangnya -->
+        <!-- daftar pendapatannya -->
 
         <div class="col-lg-12 mx-auto" data-aos="zoom-in-right" data-aos-duration="1000">
             <div class="card mt-3" style="border:1px solid #ff3900ff">
@@ -189,9 +189,9 @@ require 'partials/_nav.php';
                                 <td class="text-center">';
 
                                         if ($x_value > 1500000) {
-                                            echo  '  <p class="text-center text-success">' . $x_value . '</>';
+                                            echo  '  <p class="text-center text-success"> Rp ' . number_format($x_value, 0, ",", ".") . '</>';
                                         } else {
-                                            echo ' <p class="text-center text-danger">' . $x_value . '</>';
+                                            echo ' <p class="text-center text-danger"> Rp ' . number_format($x_value, 0, ",", ".") . '</>';
                                         }
 
                                         '</td>

@@ -85,7 +85,7 @@ require 'partials/_nav.php';
                                         ?>
 
                                         <?php
-                                        $html = '<h5 class="mt-1 mb-3">Rp ' . $totalSum . '</h5>';
+                                        $html = '<h5 class="mt-1 mb-3">Rp ' . number_format($totalSum, 0, ",", ".") . '</h5>';
                                         echo $html;
                                         ?>
 
@@ -119,7 +119,7 @@ require 'partials/_nav.php';
 
 
                                         <?php
-                                        $html = '<h5 class="mt-1 mb-3">' . $orderCount . '</h5>';
+                                        $html = '<h5 class="mt-1 mb-3">' . number_format($orderCount, 0, ",", ".") . '</h5>';
                                         echo $html;
                                         ?>
 
@@ -134,7 +134,7 @@ require 'partials/_nav.php';
                 <div class="col-lg-12 mt-3" >
                     <div class="card flex-fill w-100" style="border: 1px solid #ff3900ff;">
                         <div class="card-header" style="background-color: #fda12dff; color: #F7F6FB">
-                            <!--isinya chart buatnampilin data-->
+                            <!--isinya chart buat nampilin data-->
                             <h5 class="card-title mb-0">Grafik</h5>
                         </div>
                         <div class="row">
