@@ -65,5 +65,34 @@
     margin-right: auto;
 
 }
+ .google-map {
+    
+    padding-bottom: 50%;
+    position: relative;
+  }
+ .google-map h1{
+    color: #ff3900;
+    font-size: 250%;
+    
+ }
+  
+  .google-map iframe {
+    
+    left: 0;
+    top: 0;
+    position: static;
+  }
+  
+  .Location {
+    position: absolute;
+    top: 495px;
+    right: 400px;
+    width: 300px;
+  
+    margin-left: 20px;
+    padding: 20px;
+  }
+  
+
 
 /* tim end */
