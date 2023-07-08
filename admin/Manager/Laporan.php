@@ -141,6 +141,7 @@
         <table class="table table-striped table-hover text-center" id="NoOrder">
             <thead style="background-color: #ff3900ff;">
                 <tr style="color:white;">
+                    <th>No</th>
                     <th>Id Order</th>
                     <th>Id User</th>
                     <th>Alamat</th>
@@ -176,7 +177,7 @@
                         $orderStatus = $row['orderStatus'];
                         $counter++;
                         
-                        echo '<tr>
+                        echo '<tr><td>' . $counter . '</td>
                                 <td>' . $orderId . '</td>
                                 <td>' . $Id . '</td>
                                 <td data-bs-toggle="tooltip" title="' .$address. '">' . substr($address, 0, 20) . '...</td>
