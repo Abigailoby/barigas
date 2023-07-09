@@ -78,7 +78,7 @@
     <!-- food container starts here -->
     <div class="container my-3 "  id="cont">
         <div class="col-lg-6 text-center bg-warning my-3 animate__animated animate__fadeInDown" style="margin:auto;border-top: 2px groove #ff3900;border-bottom: 2px groove #ff3900;">     
-            <h2 class="text-center"><span id="katTitle">Items</span></h2>
+            <h2 class="text-center"><span id="katTitle">Peralatan</span></h2>
         </div>
         <div class="row ">
         <?php
@@ -107,19 +107,19 @@
                                     $quaSql = "SELECT `itemQuantity` FROM `viewcart` WHERE barangId = '$barangId' AND `userId`='$userId'";
                                     $quaresult = mysqli_query($conn, $quaSql);
                                     $quaExistRows = mysqli_num_rows($quaresult);
-                                    if($quaExistRows == 0) {
-                                        echo '<form action="partials/_manageCart.php" method="POST" style="display:contents;">
-                                              <input type="hidden" name="itemId" value="'.$barangId. '">
-                                              <button type="submit" name="addToCart" class="btn btn-primary mx-3 btn-sm " style="width:48%;height:40px" >Tambah Keranjang</button>';
-                                    }else {
-                                        echo ' <a href="viewCart.php"><button class="btn btn-primary mx-3 btn-sm " style="width:39%;height:35px">Ke Keranjang</button></a>';
-                                    }
+                                    // if($quaExistRows == 0) {
+                                    //     echo '<form action="partials/_manageCart.php" method="POST" style="display:contents;">
+                                    //           <input type="hidden" name="itemId" value="'.$barangId. '">
+                                    //           <button type="submit" name="addToCart" class="btn btn-primary mx-3 btn-sm " style="width:48%;height:40px" >Tambah Keranjang</button>';
+                                    // }else {
+                                    //     echo ' <a href="viewCart.php"><button class="btn btn-primary mx-3 btn-sm " style="width:39%;height:35px">Ke Keranjang</button></a>';
+                                    // }
                                 }
-                                else{
-                                    echo '<button class="btn btn-primary mx-3 btn-sm " data-bs-toggle="modal" data-bs-target="#loginModal" style="width:50%;height:35px">Tambah Keranjang</button>';
-                                }
+                                // else{
+                                //     echo '<button class="btn btn-primary mx-3 btn-sm " data-bs-toggle="modal" data-bs-target="#loginModal" style="width:50%;height:35px">Tambah Keranjang</button>';
+                                // }
                             echo '</form>                            
-                                <a href="viewBarang.php?barangid=' . $barangId . '" class="mx-auto btn-sm" style="display:contents;"><button class="btn btn-primary " style="width:30%">Lihat</button></a> 
+                                <a href="viewBarang.php?barangid=' . $barangId . '" class="mx-auto btn-sm" style="display:contents;"><button class="btn btn-primary " style="width:100%">Lihat</button></a> 
                                 </div>
                             </div>
                         </div>

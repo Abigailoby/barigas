@@ -22,7 +22,7 @@
                 <b><label for="name">Status Pemesanan</label></b>
                     <input class=" col-6" id="status" name="status" value="<?php echo $orderStatus; ?>" type="number" min="0" max="6" required>
                
-                    <button type="button" class="btn btn-secondary ml-1" data-bs-container="body" data-bs-toggle="popover" title="User Types" data-bs-placement="bottom" data-bs-html="true" data-bs-content="0=Pesanan Dikirm.<br> 1=Pesanan Diterima.<br> 2=Menyiapkan Pesanan Anda.<br> 3=Pesanan Sedang Dikirim!<br> 4=Pesanan Telah Sampai.<br> 5=Pesanan Ditolak.<br> 6=Pesanan Dibatalkan.">
+                    <button type="button" class="btn btn-secondary ml-1" data-bs-container="body" data-bs-toggle="popover" title="User Types" data-bs-placement="bottom" data-bs-html="true" data-bs-content="0=Pesanan Terkirim.<br> 1=Pesanan Diterima.<br> 2=Menyiapkan Pesanan Anda.<br> 3=Pesanan Sedang Dikirim!<br> 4=Pesanan Telah Sampai.<br> 5=Pesanan Ditolak.<br> 6=Pesanan Dibatalkan.">
                     <i class="fas fa-info"></i>
                  </button>
             </div>

@@ -117,7 +117,7 @@
         $orderid = $statusmodalrow['orderId'];
         $status = $statusmodalrow['orderStatus'];
         if ($status == 0) 
-            $tstatus = "Pesanan Dikirim.";
+            $tstatus = "Pesanan Terkirim.";
         elseif ($status == 1) 
             $tstatus = "Pesanan Diterima.";
         elseif ($status == 2)

@@ -24,10 +24,10 @@
                             <table class="table text">
                             <thead>
                                 <tr>
-                                <th scope="col" class="border-0" style="background-color:#5572fe;color: white; ">
+                                <th scope="col" class="border-0" style="background-color:#fda12d;color: white; ">
                                     <div class="px-3">Barang</div>
                                 </th>
-                                <th scope="col" class="border-0" style="background-color:#5572fe;color: white; ">
+                                <th scope="col" class="border-0" style="background-color:#fda12d;color: white; ">
                                     <div class="text-center">Jumlah Pesanan</div>
                                 </th>
                                 </tr>

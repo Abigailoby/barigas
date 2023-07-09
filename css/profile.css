@@ -190,14 +190,14 @@
 /* profil */
 .inpo{
     border-radius: 50px;
-    width: 65%;
+    width: 320px;
     display: flex;
 }
 
 
 
 .inpo img{
-    width: 80%;
+    width: 205px;
     height: 215px;
 }
 
@@ -281,6 +281,6 @@ button.btn.upload{
 
 @media (max-width:500px) {
     .inpo{
-        width: 95%;
+        width: 300px;
     }
 }

@@ -68,7 +68,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
                 $deletesql = "DELETE FROM `viewcart` WHERE `userId`='$userId'";   
                 $deleteresult = mysqli_query($conn, $deletesql);
-                echo '<script>alert("Terima kasih telah memesan. id pesanan anda adalah ' .$orderId. '.");
+                echo '<script>alert("Terima kasih telah memesan. id pesanan anda adalah ' .$orderId. '. Nanti akan dihubungi ketika pesanan sudah siap");
                     window.location.href="http://localhost/barigas/index.php";  
                     </script>';
                     exit();
