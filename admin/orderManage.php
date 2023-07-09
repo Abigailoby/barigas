@@ -186,8 +186,8 @@
                                 <td>' . number_format($amount, 0, ",", ".") . '</td>
                                 <td>' . $paymentMode . '</td>
                                 <td>' . $orderDate . '</td>
-                                <td><a href="#" data-bs-toggle="modal" data-bs-target="#orderStatus' . $orderId . '" class="view"><i class="material-icons">&#xE5C8;</i></a></td>
-                                <td><a href="#" data-bs-toggle="modal" data-bs-target="#orderItem'.$orderId.'" class="view" title="View Details"><i class="material-icons">&#xE5C8;</i></a></td>
+                                <td><a style="color:#ff3900ff" href="#" data-bs-toggle="modal" data-bs-target="#orderStatus' . $orderId . '" class="view"><i class="material-icons">&#xE5C8;</i></a></td>
+                                <td><a style="color:#ff3900ff" href="#" data-bs-toggle="modal" data-bs-target="#orderItem'.$orderId.'" class="view" title="View Details"><i class="material-icons">&#xE5C8;</i></a></td>
                             </tr>';
                     }
                     if($counter==0) {

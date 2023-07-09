@@ -13,7 +13,7 @@
 <div class="modal fade" id="orderItem<?php echo $orderid?>" tabindex="-1" role="dialog" aria-labelledby="orderItem<?php echo $orderid?>" aria-hidden="true" style="width: -webkit-fill-available;">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header" style="background-color: #5572fe;color:white;">
+      <div class="modal-header" style="background-color: #ff3900ff;color:white;">
         <h1 class="modal-title fs-5" id="orderItem<?php echo $orderid?>">Pesanan Barang (<b>Id Pesanan: <?php echo $orderid;?> </b>)</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
