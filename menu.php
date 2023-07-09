@@ -66,7 +66,7 @@
   <div class="container my-3 mb-5" >
   <div class="row py-5 text-center">
      <div class="col-lg-6 m-auto bg-warning animate__animated animate__fadeInDown" style="margin:auto;border-top: 2px groove #ff3900;border-bottom: 2px groove #ff3900;">
-          <h2 >Menu</h2>
+          <h2 >Produk</h2>
         </div>
        
       </div>

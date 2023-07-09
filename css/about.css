@@ -71,7 +71,7 @@
     height: 400px;
     /* display: block; */
     /* margin: auto; */
-    border-radius: 50%;
+    /* border-radius: 20%; */
     overflow: hidden;
     border: 5px solid #ff3900;
     margin-bottom: 20px;
@@ -86,10 +86,7 @@
  } */
   
   .google-map iframe {
-/*     
-    left: 0;
-    top: 0;
-    position: static; */
+    
   }
   
   .Location {
